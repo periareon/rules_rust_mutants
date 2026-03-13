@@ -1,0 +1,35 @@
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+
+exports_files(
+    [
+        "defs.bzl",
+        "extensions.bzl",
+        "MODULE.bazel",
+        "repositories.bzl",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "clippy",
+    testonly = True,
+    srcs = [
+        "//private:clippy",
+        "//test:clippy",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+bzl_library(
+    name = "bzl_lib",
+    srcs = [
+        "defs.bzl",
+        "extensions.bzl",
+        "repositories.bzl",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//3rdparty:bzl_lib",
+        "//private:bzl_lib",
+    ],
+)

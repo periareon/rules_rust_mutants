@@ -1,0 +1,80 @@
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+load("@rules_rust//cargo:defs.bzl", "cargo_toml_env_vars")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_clippy", "rust_test")
+load("//3rdparty/crates:defs.bzl", "aliases", "all_crate_deps")
+
+package(default_visibility = ["//visibility:public"])
+
+cargo_toml_env_vars(
+    name = "cargo_mutants_toml_env",
+    src = "@cargo_mutants_src//:Cargo.toml",
+)
+
+rust_binary(
+    name = "cargo_mutants",
+    srcs = ["@cargo_mutants_src//:srcs"],
+    crate_root = "@cargo_mutants_src//:src/main.rs",
+    edition = "2024",
+    aliases = aliases(
+        normal = True,
+        proc_macro = True,
+        package_name = "",
+    ),
+    deps = all_crate_deps(
+        normal = True,
+        package_name = "",
+    ),
+    proc_macro_deps = all_crate_deps(
+        proc_macro = True,
+        package_name = "",
+    ),
+    rustc_env_files = [":cargo_mutants_toml_env"],
+)
+
+rust_binary(
+    name = "runner",
+    srcs = ["runner.rs"],
+    edition = "2021",
+    deps = ["//3rdparty/crates:serde_json"],
+)
+
+rust_binary(
+    name = "mutation_args_writer",
+    srcs = ["mutation_args_writer.rs"],
+    edition = "2021",
+)
+
+rust_test(
+    name = "runner_unit_test",
+    srcs = ["runner.rs"],
+    crate_root = "runner.rs",
+    edition = "2021",
+    deps = ["//3rdparty/crates:serde_json"],
+)
+
+rust_test(
+    name = "mutation_args_writer_unit_test",
+    srcs = ["mutation_args_writer.rs"],
+    crate_root = "mutation_args_writer.rs",
+    edition = "2021",
+)
+
+rust_clippy(
+    name = "clippy",
+    testonly = True,
+    deps = [
+        ":mutation_args_writer",
+        ":mutation_args_writer_unit_test",
+        ":runner",
+        ":runner_unit_test",
+    ],
+    visibility = ["//:__pkg__"],
+)
+
+bzl_library(
+    name = "bzl_lib",
+    srcs = glob(["**/*.bzl"]),
+    deps = [
+        "@rules_rust//rust:bzl_lib",
+    ],
+)

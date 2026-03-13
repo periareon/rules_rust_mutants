@@ -1,0 +1,5 @@
+bazel-bin
+bazel-mutation
+bazel-out
+bazel-rules_rust_mutants
+bazel-testlogs

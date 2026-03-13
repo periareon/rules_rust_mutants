@@ -1,0 +1,27 @@
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+load("@rules_rust//crate_universe:defs.bzl", "crate", "crates_vendor")
+
+crates_vendor(
+    name = "crates_vendor",
+    annotations = {
+        "cargo-mutants": [crate.annotation(
+            gen_binaries = ["cargo-mutants"],
+        )],
+    },
+    cargo_lockfile = "Cargo.Bazel.lock",
+    generate_build_scripts = True,
+    manifests = ["@cargo_mutants_src//:Cargo.toml"],
+    mode = "remote",
+    packages = {},
+    repository_name = "rules_rust_mutation_deps",
+    tags = ["manual"],
+)
+
+bzl_library(
+    name = "bzl_lib",
+    srcs = [
+        "//3rdparty/crates:crates.bzl",
+        "//3rdparty/crates:defs.bzl",
+    ],
+    visibility = ["//:__pkg__"],
+)
