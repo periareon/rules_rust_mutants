@@ -30,7 +30,6 @@ load(
 # crate-root path inside the per-mutant temp directory.
 _CRATE_ROOT_PLACEHOLDER = "__MUTATION_CRATE_ROOT__"
 
-
 def _dedupe_files(files):
     seen = {}
     unique_files = []
@@ -41,7 +40,6 @@ def _dedupe_files(files):
         seen[key] = True
         unique_files.append(f)
     return unique_files
-
 
 def _collect_root_prefixes(files):
     """Collect root prefixes that should be stripped from generated rustc args.
@@ -60,7 +58,6 @@ def _collect_root_prefixes(files):
         prefixes.append(root)
     return prefixes
 
-
 def _resolve_crate_under_test(ctx):
     """Resolve CrateInfo from a `rust_library` or wrapped test crate target."""
     if rust_common.crate_info in ctx.attr.crate:
@@ -68,7 +65,6 @@ def _resolve_crate_under_test(ctx):
     if rust_common.test_crate_info in ctx.attr.crate:
         return ctx.attr.crate[rust_common.test_crate_info].crate
     fail("Target {} does not provide CrateInfo".format(ctx.attr.crate.label))
-
 
 def _build_mutation_test_crate(ctx, crate, toolchain):
     """Create a test-mode CrateInfo used only for canonical arg generation.
@@ -86,6 +82,7 @@ def _build_mutation_test_crate(ctx, crate, toolchain):
             ext = toolchain.binary_ext,
         ),
     )
+
     # `collect_inputs` may thread this output through transitive input sets.
     # Materialize a file so Bazel never sees an unresolved declared artifact.
     ctx.actions.write(placeholder_output, "")
@@ -110,7 +107,6 @@ def _build_mutation_test_crate(ctx, crate, toolchain):
         owner = ctx.label,
         cfgs = getattr(crate, "cfgs", []),
     )
-
 
 def _emit_rustc_params_file(ctx, rustc_flags, build_flags_files, compile_inputs, strip_prefixes):
     """Materialize canonical rustc flags into a runtime-ready params file.
@@ -140,7 +136,6 @@ def _emit_rustc_params_file(ctx, rustc_flags, build_flags_files, compile_inputs,
     )
 
     return params_file
-
 
 def _rust_mutation_test_impl(ctx):
     """Implementation of the rust_mutation_test rule."""
@@ -345,6 +340,11 @@ rust_mutation_test(
 Run with: `bazel test //:my_lib_mutation_test --test_output=all`
 """,
     attrs = {
+        "allow_survivors": attr.bool(
+            default = False,
+            doc = "If True, survived mutants are reported but do not fail the test. " +
+                  "Default is False (survivors fail).",
+        ),
         "crate": attr.label(
             mandatory = True,
             doc = "The `rust_library` crate to mutation-test. " +
@@ -357,24 +357,19 @@ Run with: `bazel test //:my_lib_mutation_test --test_output=all`
                   "It is forwarded as `cargo mutants --config <path>`. " +
                   "If all mutants are filtered out, the target succeeds and reports no mutants.",
         ),
-        "allow_survivors": attr.bool(
-            default = False,
-            doc = "If True, survived mutants are reported but do not fail the test. " +
-                  "Default is False (survivors fail).",
-        ),
         "_cargo_mutants": attr.label(
             default = Label("//private:cargo_mutants"),
             executable = True,
             cfg = "exec",
             allow_files = True,
         ),
-        "_mutation_runner": attr.label(
-            default = Label("//private:runner"),
+        "_mutation_args_writer": attr.label(
+            default = Label("//private:mutation_args_writer"),
             executable = True,
             cfg = "exec",
         ),
-        "_mutation_args_writer": attr.label(
-            default = Label("//private:mutation_args_writer"),
+        "_mutation_runner": attr.label(
+            default = Label("//private:runner"),
             executable = True,
             cfg = "exec",
         ),

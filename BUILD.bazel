@@ -4,8 +4,10 @@ exports_files(
     [
         "defs.bzl",
         "extensions.bzl",
+        "LICENSE",
         "MODULE.bazel",
         "repositories.bzl",
+        "version.bzl",
     ],
     visibility = ["//visibility:public"],
 )

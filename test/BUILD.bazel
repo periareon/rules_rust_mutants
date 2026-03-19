@@ -16,8 +16,8 @@ rust_library(
 
 rust_mutation_test(
     name = "example_mutation_test",
-    crate = ":example",
     size = "small",
+    crate = ":example",
 )
 
 rust_library(
@@ -32,8 +32,8 @@ rust_library(
 
 rust_mutation_test(
     name = "multifile_example_mutation_test",
-    crate = ":multifile_example",
     size = "small",
+    crate = ":multifile_example",
 )
 
 rust_library(
@@ -48,16 +48,16 @@ rust_library(
 
 rust_mutation_test(
     name = "survivor_example_mutation_test",
-    crate = ":survivor_example",
     size = "small",
+    crate = ":survivor_example",
     tags = ["manual"],
 )
 
 rust_mutation_test(
     name = "survivor_allow_survivors_example_mutation_test",
-    crate = ":survivor_example",
     size = "small",
     allow_survivors = True,
+    crate = ":survivor_example",
 )
 
 rust_library(
@@ -70,39 +70,39 @@ rust_library(
 
 rust_mutation_test(
     name = "compile_data_example_mutation_test",
-    crate = ":compile_data_example",
     size = "small",
     allow_survivors = True,
+    crate = ":compile_data_example",
 )
 
 rust_library(
     name = "rustc_env_example",
     srcs = ["rustc_env/lib.rs"],
-    rustc_env = {"MUTATION_EXPECTED_TOKEN": "ok"},
     edition = "2021",
     lint_config = ":mutation_fixture_lints",
+    rustc_env = {"MUTATION_EXPECTED_TOKEN": "ok"},
 )
 
 rust_mutation_test(
     name = "rustc_env_example_mutation_test",
-    crate = ":rustc_env_example",
     size = "small",
     allow_survivors = True,
+    crate = ":rustc_env_example",
 )
 
 rust_library(
     name = "rustc_env_files_example",
     srcs = ["rustc_env_files/lib.rs"],
-    rustc_env_files = ["rustc_env_files/rustc_env_file.env"],
     edition = "2021",
     lint_config = ":mutation_fixture_lints",
+    rustc_env_files = ["rustc_env_files/rustc_env_file.env"],
 )
 
 rust_mutation_test(
     name = "rustc_env_files_example_mutation_test",
-    crate = ":rustc_env_files_example",
     size = "small",
     allow_survivors = True,
+    crate = ":rustc_env_files_example",
 )
 
 rust_library(
@@ -114,9 +114,9 @@ rust_library(
 
 rust_mutation_test(
     name = "hermetic_env_example_mutation_test",
-    crate = ":hermetic_env_example",
     size = "small",
     allow_survivors = True,
+    crate = ":hermetic_env_example",
 )
 
 rust_library(
@@ -129,16 +129,16 @@ rust_library(
 
 rust_mutation_test(
     name = "runtime_data_example_mutation_test",
-    crate = ":runtime_data_example",
     size = "small",
     allow_survivors = True,
+    crate = ":runtime_data_example",
 )
 
 rust_mutation_test(
     name = "mutants_config_example_mutation_test",
+    size = "small",
     crate = ":example",
     mutants_config = "mutants_config/exclude_all.toml",
-    size = "small",
     tags = ["manual"],
 )
 
@@ -151,84 +151,85 @@ rust_library(
 
 rust_mutation_test(
     name = "failing_baseline_mutation_test",
-    crate = ":failing_baseline_example",
     size = "small",
+    crate = ":failing_baseline_example",
     tags = ["manual"],
 )
 
 sh_test(
     name = "survivor_output_test",
+    size = "small",
     srcs = ["survivor_output_test.sh"],
     data = [":survivor_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "allow_survivors_support_test",
+    size = "small",
     srcs = ["allow_survivors_support_test.sh"],
     data = [":survivor_allow_survivors_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "baseline_failure_handling_test",
+    size = "small",
     srcs = ["baseline_failure_handling_test.sh"],
     data = [":failing_baseline_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "compile_data_support_test",
+    size = "small",
     srcs = ["compile_data_support_test.sh"],
     data = [":compile_data_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "rustc_env_support_test",
+    size = "small",
     srcs = ["rustc_env_support_test.sh"],
     data = [":rustc_env_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "rustc_env_files_support_test",
+    size = "small",
     srcs = ["rustc_env_files_support_test.sh"],
     data = [":rustc_env_files_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "hermetic_env_support_test",
+    size = "small",
     srcs = ["hermetic_env_support_test.sh"],
     data = [":hermetic_env_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "runtime_data_support_test",
+    size = "small",
     srcs = ["runtime_data_support_test.sh"],
     data = [":runtime_data_example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "poisoned_cargo_home_support_test",
+    size = "small",
     srcs = ["poisoned_cargo_home_support_test.sh"],
     data = [":example_mutation_test"],
-    size = "small",
 )
 
 sh_test(
     name = "mutants_config_forwarding_test",
+    size = "small",
     srcs = ["mutants_config_forwarding_test.sh"],
     data = [":mutants_config_example_mutation_test"],
-    size = "small",
 )
 
 rust_clippy(
     name = "clippy",
     testonly = True,
+    visibility = ["//:__pkg__"],
     deps = [
         ":compile_data_example",
         ":example",
@@ -240,5 +241,4 @@ rust_clippy(
         ":rustc_env_files_example",
         ":survivor_example",
     ],
-    visibility = ["//:__pkg__"],
 )
