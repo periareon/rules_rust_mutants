@@ -349,10 +349,19 @@ fn load_rustc_env(args: &Args) -> Result<HashMap<String, String>, String> {
 }
 
 fn load_rustc_params(params_file: &Path) -> Result<Vec<String>, String> {
-    let cwd = std::env::current_dir()
-        .map_err(|e| format!("Failed to read current directory for param expansion: {}", e))?;
-    let params_content = fs::read_to_string(params_file)
-        .map_err(|e| format!("Failed to read params file {}: {}", params_file.display(), e))?;
+    let cwd = std::env::current_dir().map_err(|e| {
+        format!(
+            "Failed to read current directory for param expansion: {}",
+            e
+        )
+    })?;
+    let params_content = fs::read_to_string(params_file).map_err(|e| {
+        format!(
+            "Failed to read params file {}: {}",
+            params_file.display(),
+            e
+        )
+    })?;
 
     let mut params = Vec::new();
     for line in params_content.lines() {
@@ -959,20 +968,19 @@ fn main() {
             config
         }
     });
-    let file_mutants =
-        match collect_file_mutants(
-            &sources,
-            &cargo_mutants,
-            &cargo,
-            mutants_config.as_deref(),
-            &subprocess_env,
-        ) {
-            Ok(m) => m,
-            Err(e) => {
-                eprintln!("Failed to generate mutants: {}", e);
-                std::process::exit(1);
-            }
-        };
+    let file_mutants = match collect_file_mutants(
+        &sources,
+        &cargo_mutants,
+        &cargo,
+        mutants_config.as_deref(),
+        &subprocess_env,
+    ) {
+        Ok(m) => m,
+        Err(e) => {
+            eprintln!("Failed to generate mutants: {}", e);
+            std::process::exit(1);
+        }
+    };
 
     println!("Running baseline compile+test...");
     let report = match run_mutation_campaign(&file_mutants, |mutation| match mutation {

@@ -81,8 +81,8 @@ fn expand_arg_params(arg: &str) -> Result<Option<Vec<String>>, String> {
 
     let mut expanded = Vec::new();
     for line in reader.lines() {
-        let line = line
-            .map_err(|e| format!("Failed reading parameter file {}: {e}", path.display()))?;
+        let line =
+            line.map_err(|e| format!("Failed reading parameter file {}: {e}", path.display()))?;
         let trimmed = line.trim();
         if !trimmed.is_empty() {
             expanded.push(trimmed.to_owned());
@@ -202,8 +202,12 @@ fn main() {
         panic!("Failed to build runtime rustc params: {e}");
     });
 
-    fs::write(&options.output, params.join("\n"))
-        .unwrap_or_else(|e| panic!("Failed to write params file {}: {e}", options.output.display()));
+    fs::write(&options.output, params.join("\n")).unwrap_or_else(|e| {
+        panic!(
+            "Failed to write params file {}: {e}",
+            options.output.display()
+        )
+    });
 }
 
 #[cfg(test)]
