@@ -5,6 +5,7 @@ using the same rustc argument construction pipeline as `rust_test`, and
 reports which mutations are caught by the test suite.
 """
 
+# buildifier: disable=bzl-visibility
 load("@rules_rust//rust/private:common.bzl", "rust_common")
 
 # buildifier: disable=bzl-visibility
