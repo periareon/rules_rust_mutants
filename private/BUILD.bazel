@@ -35,7 +35,10 @@ rust_binary(
     name = "runner",
     srcs = ["runner.rs"],
     edition = "2021",
-    deps = ["//3rdparty/crates:serde_json"],
+    deps = [
+        "//3rdparty/crates:serde_json",
+        "@rules_rust//rust/runfiles",
+    ],
 )
 
 rust_binary(
@@ -49,7 +52,10 @@ rust_test(
     srcs = ["runner.rs"],
     crate_root = "runner.rs",
     edition = "2021",
-    deps = ["//3rdparty/crates:serde_json"],
+    deps = [
+        "//3rdparty/crates:serde_json",
+        "@rules_rust//rust/runfiles",
+    ],
 )
 
 rust_test(

@@ -56,8 +56,7 @@ fn next_arg_value(raw: &[String], i: &mut usize, flag: &str) -> String {
     raw[*i].clone()
 }
 
-fn parse_args() -> Args {
-    let raw: Vec<String> = std::env::args().collect();
+fn parse_args_from_vec(raw: &[String]) -> Args {
     let mut rustc = None;
     let mut params_file = None;
     let mut crate_root = None;
@@ -72,61 +71,57 @@ fn parse_args() -> Args {
     let mut mutants_config = None;
     let mut allow_survivors = false;
 
-    let mut i = 1;
+    let mut i = 0;
     while i < raw.len() {
         match raw[i].as_str() {
             "--rustc" => {
-                rustc = Some(PathBuf::from(next_arg_value(&raw, &mut i, "--rustc")));
+                rustc = Some(PathBuf::from(next_arg_value(raw, &mut i, "--rustc")));
             }
             "--params" => {
-                params_file = Some(PathBuf::from(next_arg_value(&raw, &mut i, "--params")));
+                params_file = Some(PathBuf::from(next_arg_value(raw, &mut i, "--params")));
             }
             "--crate-root" => {
-                crate_root = Some(PathBuf::from(next_arg_value(&raw, &mut i, "--crate-root")));
+                crate_root = Some(PathBuf::from(next_arg_value(raw, &mut i, "--crate-root")));
             }
             "--source" => {
-                sources.push(PathBuf::from(next_arg_value(&raw, &mut i, "--source")));
+                sources.push(PathBuf::from(next_arg_value(raw, &mut i, "--source")));
             }
             "--sources-file" => {
-                sources_file = Some(PathBuf::from(next_arg_value(
-                    &raw,
-                    &mut i,
-                    "--sources-file",
-                )));
+                sources_file = Some(PathBuf::from(next_arg_value(raw, &mut i, "--sources-file")));
             }
             "--input" => {
-                inputs.push(PathBuf::from(next_arg_value(&raw, &mut i, "--input")));
+                inputs.push(PathBuf::from(next_arg_value(raw, &mut i, "--input")));
             }
             "--inputs-file" => {
-                inputs_file = Some(PathBuf::from(next_arg_value(&raw, &mut i, "--inputs-file")));
+                inputs_file = Some(PathBuf::from(next_arg_value(raw, &mut i, "--inputs-file")));
             }
             "--rustc-env-file" => {
                 rustc_env_file = Some(PathBuf::from(next_arg_value(
-                    &raw,
+                    raw,
                     &mut i,
                     "--rustc-env-file",
                 )));
             }
             "--rustc-env-files-list" => {
                 rustc_env_files_list = Some(PathBuf::from(next_arg_value(
-                    &raw,
+                    raw,
                     &mut i,
                     "--rustc-env-files-list",
                 )));
             }
             "--cargo-mutants" => {
                 cargo_mutants = Some(PathBuf::from(next_arg_value(
-                    &raw,
+                    raw,
                     &mut i,
                     "--cargo-mutants",
                 )));
             }
             "--cargo" => {
-                cargo = Some(PathBuf::from(next_arg_value(&raw, &mut i, "--cargo")));
+                cargo = Some(PathBuf::from(next_arg_value(raw, &mut i, "--cargo")));
             }
             "--mutants-config" => {
                 mutants_config = Some(PathBuf::from(next_arg_value(
-                    &raw,
+                    raw,
                     &mut i,
                     "--mutants-config",
                 )));
@@ -165,6 +160,43 @@ fn parse_args() -> Args {
         cargo_mutants,
         mutants_config,
         allow_survivors,
+    }
+}
+
+fn parse_args() -> Args {
+    let raw: Vec<String> = std::env::args().collect();
+    parse_args_from_vec(&raw[1..])
+}
+
+fn load_args_file(path: &Path) -> Args {
+    let content = fs::read_to_string(path)
+        .unwrap_or_else(|e| panic!("Failed to read args file {}: {e}", path.display()));
+    let tokens: Vec<String> = content
+        .lines()
+        .filter(|l| !l.is_empty())
+        .map(String::from)
+        .collect();
+    parse_args_from_vec(&tokens)
+}
+
+fn load_args_from_env() -> Option<Args> {
+    let rlocation_path = std::env::var("RUST_MUTATION_TEST_ARGS_FILE").ok()?;
+    let runfiles = runfiles::Runfiles::create().expect("Failed to create runfiles");
+    let resolved = runfiles::rlocation!(runfiles, rlocation_path)
+        .expect("Failed to resolve RUST_MUTATION_TEST_ARGS_FILE via rlocation");
+    Some(load_args_file(&resolved))
+}
+
+/// Derive the args file path from argv[0] (e.g. `./foo` -> `./foo.mutation_args`).
+/// This supports sh_test wrappers that invoke the binary directly without the
+/// env var set by RunEnvironmentInfo.
+fn load_args_from_argv0() -> Option<Args> {
+    let exe = std::env::args().next()?;
+    let args_path = PathBuf::from(format!("{}.mutation_args", exe));
+    if args_path.exists() {
+        Some(load_args_file(&args_path))
+    } else {
+        None
     }
 }
 
@@ -879,8 +911,28 @@ fn compile_and_test_case(
     result
 }
 
+fn ensure_external_symlink() {
+    #[cfg(unix)]
+    {
+        use std::os::unix::fs::symlink;
+        if !Path::new("external").exists() {
+            let _ = symlink("../", "external");
+        }
+    }
+    #[cfg(windows)]
+    {
+        use std::os::windows::fs::symlink_dir;
+        if !Path::new("external").exists() {
+            let _ = symlink_dir("..\\", "external");
+        }
+    }
+}
+
 fn main() {
-    let args = parse_args();
+    ensure_external_symlink();
+    let args = load_args_from_env()
+        .or_else(load_args_from_argv0)
+        .unwrap_or_else(parse_args);
 
     let params = match load_rustc_params(&args.params_file) {
         Ok(params) => params,

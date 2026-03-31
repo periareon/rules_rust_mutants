@@ -31,6 +31,11 @@ load(
 # crate-root path inside the per-mutant temp directory.
 _CRATE_ROOT_PLACEHOLDER = "__MUTATION_CRATE_ROOT__"
 
+def _rlocationpath(file, workspace_name):
+    if file.short_path.startswith("../"):
+        return file.short_path[len("../"):]
+    return "{}/{}".format(workspace_name, file.short_path)
+
 def _dedupe_files(files):
     seen = {}
     unique_files = []
@@ -241,43 +246,32 @@ def _rust_mutation_test_impl(ctx):
         strip_prefixes,
     )
 
-    # Generate the test runner wrapper.
+    # Write the runner args to a param file instead of generating a shell script.
     cargo_mutants_tool = ctx.executable._cargo_mutants
-    is_windows = toolchain.rustc.basename.endswith(".exe")
-    runner = ctx.actions.declare_file(ctx.label.name + (".bat" if is_windows else ""))
-    runner_args = '--rustc "{rustc}" --cargo "{cargo}" --cargo-mutants "{cargo_mutants}" --params "{params}" --crate-root "{crate_root}" --sources-file "{sources_file}" --inputs-file "{inputs_file}" --rustc-env-file "{rustc_env_file}" --rustc-env-files-list "{rustc_env_files_list}"'.format(
-        rustc = toolchain.rustc.short_path,
-        cargo = toolchain.cargo.short_path,
-        cargo_mutants = cargo_mutants_tool.short_path,
-        params = params_file.short_path,
-        crate_root = mutation_test_crate.root.short_path,
-        sources_file = sources_file.short_path,
-        inputs_file = inputs_file.short_path,
-        rustc_env_file = rustc_env_file.short_path,
-        rustc_env_files_list = rustc_env_files_list.short_path,
-    )
+    args_file = ctx.actions.declare_file(ctx.label.name + ".mutation_args")
+    args_content = ctx.actions.args()
+    args_content.add("--rustc", toolchain.rustc.short_path)
+    args_content.add("--cargo", toolchain.cargo.short_path)
+    args_content.add("--cargo-mutants", cargo_mutants_tool.short_path)
+    args_content.add("--params", params_file.short_path)
+    args_content.add("--crate-root", mutation_test_crate.root.short_path)
+    args_content.add("--sources-file", sources_file.short_path)
+    args_content.add("--inputs-file", inputs_file.short_path)
+    args_content.add("--rustc-env-file", rustc_env_file.short_path)
+    args_content.add("--rustc-env-files-list", rustc_env_files_list.short_path)
     if ctx.file.mutants_config:
-        runner_args += ' --mutants-config "{mutants_config}"'.format(
-            mutants_config = ctx.file.mutants_config.short_path,
-        )
+        args_content.add("--mutants-config", ctx.file.mutants_config.short_path)
     if ctx.attr.allow_survivors:
-        runner_args += " --allow-survivors"
+        args_content.add("--allow-survivors")
+    ctx.actions.write(args_file, args_content)
 
-    if is_windows:
-        content = '@echo off\r\npowershell.exe -c "if (!(Test-Path .\\external)) { New-Item -Path .\\external -ItemType SymbolicLink -Value ..\\ }" >NUL 2>NUL\r\n"{runner}" {args}\r\n'.format(
-            runner = ctx.executable._mutation_runner.short_path,
-            args = runner_args,
-        )
-    else:
-        content = "#!/bin/bash\n" + "set -euo pipefail\n" + "if [[ ! -e external ]]; then ln -s ../ external; fi\n" + 'exec "{runner}" {args}\n'.format(
-            runner = ctx.executable._mutation_runner.short_path,
-            args = runner_args,
-        )
-    ctx.actions.write(runner, content, is_executable = True)
+    runner = ctx.actions.declare_file(ctx.label.name)
+    ctx.actions.symlink(output = runner, target_file = ctx.executable._mutation_runner)
 
     # Collect all files needed at test time.
     runfiles_files = _dedupe_files(
         [
+            args_file,
             params_file,
             sources_file,
             inputs_file,
@@ -298,10 +292,15 @@ def _rust_mutation_test_impl(ctx):
     if crate_default_info.data_runfiles:
         runfiles = runfiles.merge(crate_default_info.data_runfiles)
 
-    return [DefaultInfo(
-        executable = runner,
-        runfiles = runfiles,
-    )]
+    return [
+        DefaultInfo(
+            executable = runner,
+            runfiles = runfiles,
+        ),
+        RunEnvironmentInfo(environment = {
+            "RUST_MUTATION_TEST_ARGS_FILE": _rlocationpath(args_file, ctx.workspace_name),
+        }),
+    ]
 
 rust_mutation_test = rule(
     implementation = _rust_mutation_test_impl,
