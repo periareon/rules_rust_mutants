@@ -103,11 +103,11 @@ rust_library(
     }),
     version = "3.1.4",
     deps = [
-        "@rules_rust_mutation_deps__anstyle-1.0.13//:anstyle",
-        "@rules_rust_mutation_deps__difflib-0.4.0//:difflib",
-        "@rules_rust_mutation_deps__float-cmp-0.10.0//:float_cmp",
-        "@rules_rust_mutation_deps__normalize-line-endings-0.3.0//:normalize_line_endings",
-        "@rules_rust_mutation_deps__predicates-core-1.0.10//:predicates_core",
-        "@rules_rust_mutation_deps__regex-1.12.3//:regex",
+        "@rules_rust_mutants_deps__anstyle-1.0.13//:anstyle",
+        "@rules_rust_mutants_deps__difflib-0.4.0//:difflib",
+        "@rules_rust_mutants_deps__float-cmp-0.10.0//:float_cmp",
+        "@rules_rust_mutants_deps__normalize-line-endings-0.3.0//:normalize_line_endings",
+        "@rules_rust_mutants_deps__predicates-core-1.0.10//:predicates_core",
+        "@rules_rust_mutants_deps__regex-1.12.3//:regex",
     ],
 )

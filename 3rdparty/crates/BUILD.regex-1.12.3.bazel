@@ -114,9 +114,9 @@ rust_library(
     }),
     version = "1.12.3",
     deps = [
-        "@rules_rust_mutation_deps__aho-corasick-1.1.4//:aho_corasick",
-        "@rules_rust_mutation_deps__memchr-2.8.0//:memchr",
-        "@rules_rust_mutation_deps__regex-automata-0.4.14//:regex_automata",
-        "@rules_rust_mutation_deps__regex-syntax-0.8.10//:regex_syntax",
+        "@rules_rust_mutants_deps__aho-corasick-1.1.4//:aho_corasick",
+        "@rules_rust_mutants_deps__memchr-2.8.0//:memchr",
+        "@rules_rust_mutants_deps__regex-automata-0.4.14//:regex_automata",
+        "@rules_rust_mutants_deps__regex-syntax-0.8.10//:regex_syntax",
     ],
 )

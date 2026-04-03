@@ -107,6 +107,6 @@ rust_library(
     }),
     version = "0.59.0",
     deps = [
-        "@rules_rust_mutation_deps__windows-targets-0.52.6//:windows_targets",
+        "@rules_rust_mutants_deps__windows-targets-0.52.6//:windows_targets",
     ],
 )

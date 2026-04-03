@@ -95,9 +95,9 @@ rust_library(
     }),
     version = "0.244.0",
     deps = [
-        "@rules_rust_mutation_deps__anyhow-1.0.102//:anyhow",
-        "@rules_rust_mutation_deps__indexmap-2.13.0//:indexmap",
-        "@rules_rust_mutation_deps__wasm-encoder-0.244.0//:wasm_encoder",
-        "@rules_rust_mutation_deps__wasmparser-0.244.0//:wasmparser",
+        "@rules_rust_mutants_deps__anyhow-1.0.102//:anyhow",
+        "@rules_rust_mutants_deps__indexmap-2.13.0//:indexmap",
+        "@rules_rust_mutants_deps__wasm-encoder-0.244.0//:wasm_encoder",
+        "@rules_rust_mutants_deps__wasmparser-0.244.0//:wasmparser",
     ],
 )

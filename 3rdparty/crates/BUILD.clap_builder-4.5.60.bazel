@@ -106,10 +106,10 @@ rust_library(
     }),
     version = "4.5.60",
     deps = [
-        "@rules_rust_mutation_deps__anstream-0.6.21//:anstream",
-        "@rules_rust_mutation_deps__anstyle-1.0.13//:anstyle",
-        "@rules_rust_mutation_deps__clap_lex-1.0.0//:clap_lex",
-        "@rules_rust_mutation_deps__strsim-0.11.1//:strsim",
-        "@rules_rust_mutation_deps__terminal_size-0.4.3//:terminal_size",
+        "@rules_rust_mutants_deps__anstream-0.6.21//:anstream",
+        "@rules_rust_mutants_deps__anstyle-1.0.13//:anstyle",
+        "@rules_rust_mutants_deps__clap_lex-1.0.0//:clap_lex",
+        "@rules_rust_mutants_deps__strsim-0.11.1//:strsim",
+        "@rules_rust_mutants_deps__terminal_size-0.4.3//:terminal_size",
     ],
 )

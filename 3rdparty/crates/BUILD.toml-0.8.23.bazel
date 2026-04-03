@@ -100,9 +100,9 @@ rust_library(
     }),
     version = "0.8.23",
     deps = [
-        "@rules_rust_mutation_deps__serde-1.0.228//:serde",
-        "@rules_rust_mutation_deps__serde_spanned-0.6.9//:serde_spanned",
-        "@rules_rust_mutation_deps__toml_datetime-0.6.11//:toml_datetime",
-        "@rules_rust_mutation_deps__toml_edit-0.22.27//:toml_edit",
+        "@rules_rust_mutants_deps__serde-1.0.228//:serde",
+        "@rules_rust_mutants_deps__serde_spanned-0.6.9//:serde_spanned",
+        "@rules_rust_mutants_deps__toml_datetime-0.6.11//:toml_datetime",
+        "@rules_rust_mutants_deps__toml_edit-0.22.27//:toml_edit",
     ],
 )

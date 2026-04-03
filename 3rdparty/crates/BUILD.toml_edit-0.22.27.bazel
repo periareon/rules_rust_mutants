@@ -100,11 +100,11 @@ rust_library(
     }),
     version = "0.22.27",
     deps = [
-        "@rules_rust_mutation_deps__indexmap-2.13.0//:indexmap",
-        "@rules_rust_mutation_deps__serde-1.0.228//:serde",
-        "@rules_rust_mutation_deps__serde_spanned-0.6.9//:serde_spanned",
-        "@rules_rust_mutation_deps__toml_datetime-0.6.11//:toml_datetime",
-        "@rules_rust_mutation_deps__toml_write-0.1.2//:toml_write",
-        "@rules_rust_mutation_deps__winnow-0.7.14//:winnow",
+        "@rules_rust_mutants_deps__indexmap-2.13.0//:indexmap",
+        "@rules_rust_mutants_deps__serde-1.0.228//:serde",
+        "@rules_rust_mutants_deps__serde_spanned-0.6.9//:serde_spanned",
+        "@rules_rust_mutants_deps__toml_datetime-0.6.11//:toml_datetime",
+        "@rules_rust_mutants_deps__toml_write-0.1.2//:toml_write",
+        "@rules_rust_mutants_deps__winnow-0.7.14//:winnow",
     ],
 )

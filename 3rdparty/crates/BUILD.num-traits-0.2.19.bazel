@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "0.2.19",
     deps = [
-        "@rules_rust_mutation_deps__num-traits-0.2.19//:build_script_build",
+        "@rules_rust_mutants_deps__num-traits-0.2.19//:build_script_build",
     ],
 )
 
@@ -154,7 +154,7 @@ cargo_build_script(
     version = "0.2.19",
     visibility = ["//visibility:private"],
     deps = [
-        "@rules_rust_mutation_deps__autocfg-1.5.0//:autocfg",
+        "@rules_rust_mutants_deps__autocfg-1.5.0//:autocfg",
     ],
 )
 

@@ -103,9 +103,9 @@ rust_library(
     }),
     version = "0.244.0",
     deps = [
-        "@rules_rust_mutation_deps__bitflags-2.11.0//:bitflags",
-        "@rules_rust_mutation_deps__hashbrown-0.15.5//:hashbrown",
-        "@rules_rust_mutation_deps__indexmap-2.13.0//:indexmap",
-        "@rules_rust_mutation_deps__semver-1.0.27//:semver",
+        "@rules_rust_mutants_deps__bitflags-2.11.0//:bitflags",
+        "@rules_rust_mutants_deps__hashbrown-0.15.5//:hashbrown",
+        "@rules_rust_mutants_deps__indexmap-2.13.0//:indexmap",
+        "@rules_rust_mutants_deps__semver-1.0.27//:semver",
     ],
 )

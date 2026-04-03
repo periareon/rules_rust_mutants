@@ -13,7 +13,7 @@ crates_vendor(
     manifests = ["@cargo_mutants_src//:Cargo.toml"],
     mode = "remote",
     packages = {},
-    repository_name = "rules_rust_mutation_deps",
+    repository_name = "rules_rust_mutants_deps",
     tags = ["manual"],
 )
 

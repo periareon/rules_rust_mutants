@@ -99,14 +99,14 @@ rust_proc_macro(
     }),
     version = "0.51.0",
     deps = [
-        "@rules_rust_mutation_deps__anyhow-1.0.102//:anyhow",
-        "@rules_rust_mutation_deps__prettyplease-0.2.37//:prettyplease",
-        "@rules_rust_mutation_deps__proc-macro2-1.0.106//:proc_macro2",
-        "@rules_rust_mutation_deps__quote-1.0.44//:quote",
-        "@rules_rust_mutation_deps__syn-2.0.117//:syn",
-        "@rules_rust_mutation_deps__wit-bindgen-core-0.51.0//:wit_bindgen_core",
-        "@rules_rust_mutation_deps__wit-bindgen-rust-0.51.0//:wit_bindgen_rust",
-        "@rules_rust_mutation_deps__wit-bindgen-rust-macro-0.51.0//:build_script_build",
+        "@rules_rust_mutants_deps__anyhow-1.0.102//:anyhow",
+        "@rules_rust_mutants_deps__prettyplease-0.2.37//:prettyplease",
+        "@rules_rust_mutants_deps__proc-macro2-1.0.106//:proc_macro2",
+        "@rules_rust_mutants_deps__quote-1.0.44//:quote",
+        "@rules_rust_mutants_deps__syn-2.0.117//:syn",
+        "@rules_rust_mutants_deps__wit-bindgen-core-0.51.0//:wit_bindgen_core",
+        "@rules_rust_mutants_deps__wit-bindgen-rust-0.51.0//:wit_bindgen_rust",
+        "@rules_rust_mutants_deps__wit-bindgen-rust-macro-0.51.0//:build_script_build",
     ],
 )
 
@@ -145,7 +145,7 @@ cargo_build_script(
     ),
     edition = "2024",
     link_deps = [
-        "@rules_rust_mutation_deps__prettyplease-0.2.37//:prettyplease",
+        "@rules_rust_mutants_deps__prettyplease-0.2.37//:prettyplease",
     ],
     pkg_name = "wit-bindgen-rust-macro",
     rustc_env_files = [

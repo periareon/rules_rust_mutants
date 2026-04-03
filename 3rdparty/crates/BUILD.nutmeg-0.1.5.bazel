@@ -95,8 +95,8 @@ rust_library(
     }),
     version = "0.1.5",
     deps = [
-        "@rules_rust_mutation_deps__atty-0.2.14//:atty",
-        "@rules_rust_mutation_deps__terminal_size-0.2.6//:terminal_size",
-        "@rules_rust_mutation_deps__yansi-0.5.1//:yansi",
+        "@rules_rust_mutants_deps__atty-0.2.14//:atty",
+        "@rules_rust_mutants_deps__terminal_size-0.2.6//:terminal_size",
+        "@rules_rust_mutants_deps__yansi-0.5.1//:yansi",
     ],
 )

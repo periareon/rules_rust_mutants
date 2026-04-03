@@ -105,7 +105,7 @@ rust_library(
     }),
     version = "0.3.91",
     deps = [
-        "@rules_rust_mutation_deps__js-sys-0.3.91//:js_sys",
-        "@rules_rust_mutation_deps__wasm-bindgen-0.2.114//:wasm_bindgen",
+        "@rules_rust_mutants_deps__js-sys-0.3.91//:js_sys",
+        "@rules_rust_mutants_deps__wasm-bindgen-0.2.114//:wasm_bindgen",
     ],
 )

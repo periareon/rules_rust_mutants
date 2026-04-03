@@ -153,8 +153,8 @@ rust_library(
     }),
     version = "2.0.117",
     deps = [
-        "@rules_rust_mutation_deps__proc-macro2-1.0.106//:proc_macro2",
-        "@rules_rust_mutation_deps__quote-1.0.44//:quote",
-        "@rules_rust_mutation_deps__unicode-ident-1.0.24//:unicode_ident",
+        "@rules_rust_mutants_deps__proc-macro2-1.0.106//:proc_macro2",
+        "@rules_rust_mutants_deps__quote-1.0.44//:quote",
+        "@rules_rust_mutants_deps__unicode-ident-1.0.24//:unicode_ident",
     ],
 )

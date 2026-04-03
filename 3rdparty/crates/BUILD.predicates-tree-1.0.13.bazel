@@ -95,7 +95,7 @@ rust_library(
     }),
     version = "1.0.13",
     deps = [
-        "@rules_rust_mutation_deps__predicates-core-1.0.10//:predicates_core",
-        "@rules_rust_mutation_deps__termtree-0.5.1//:termtree",
+        "@rules_rust_mutants_deps__predicates-core-1.0.10//:predicates_core",
+        "@rules_rust_mutants_deps__termtree-0.5.1//:termtree",
     ],
 )

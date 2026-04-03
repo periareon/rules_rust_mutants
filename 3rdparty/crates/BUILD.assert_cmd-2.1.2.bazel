@@ -99,13 +99,13 @@ rust_library(
     }),
     version = "2.1.2",
     deps = [
-        "@rules_rust_mutation_deps__anstyle-1.0.13//:anstyle",
-        "@rules_rust_mutation_deps__assert_cmd-2.1.2//:build_script_build",
-        "@rules_rust_mutation_deps__bstr-1.12.1//:bstr",
-        "@rules_rust_mutation_deps__predicates-3.1.4//:predicates",
-        "@rules_rust_mutation_deps__predicates-core-1.0.10//:predicates_core",
-        "@rules_rust_mutation_deps__predicates-tree-1.0.13//:predicates_tree",
-        "@rules_rust_mutation_deps__wait-timeout-0.2.1//:wait_timeout",
+        "@rules_rust_mutants_deps__anstyle-1.0.13//:anstyle",
+        "@rules_rust_mutants_deps__assert_cmd-2.1.2//:build_script_build",
+        "@rules_rust_mutants_deps__bstr-1.12.1//:bstr",
+        "@rules_rust_mutants_deps__predicates-3.1.4//:predicates",
+        "@rules_rust_mutants_deps__predicates-core-1.0.10//:predicates_core",
+        "@rules_rust_mutants_deps__predicates-tree-1.0.13//:predicates_tree",
+        "@rules_rust_mutants_deps__wait-timeout-0.2.1//:wait_timeout",
     ],
 )
 

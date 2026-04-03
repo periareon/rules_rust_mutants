@@ -1,4 +1,4 @@
-"""# rules_rust_mutation
+"""# rules_rust_mutants
 
 Mutation testing for Rust crates built with rules_rust.
 
@@ -17,7 +17,7 @@ runs the crate's inline `#[cfg(test)]` tests against each mutant.
 Add the following to your `MODULE.bazel` file:
 
 ```python
-bazel_dep(name = "rules_rust_mutation", version = "{SEE_RELEASE_NOTES}")
+bazel_dep(name = "rules_rust_mutants", version = "{SEE_RELEASE_NOTES}")
 ```
 
 ### WORKSPACE
@@ -25,7 +25,7 @@ bazel_dep(name = "rules_rust_mutation", version = "{SEE_RELEASE_NOTES}")
 If you're using `WORKSPACE`, load repositories with:
 
 ```python
-load("@rules_rust_mutation//:repositories.bzl", "rust_mutation_dependencies")
+load("@rules_rust_mutants//:repositories.bzl", "rust_mutation_dependencies")
 
 rust_mutation_dependencies()
 ```
@@ -33,7 +33,7 @@ rust_mutation_dependencies()
 ### Usage
 
 ```python
-load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 load("@rules_rust//rust:defs.bzl", "rust_library")
 
 rust_library(

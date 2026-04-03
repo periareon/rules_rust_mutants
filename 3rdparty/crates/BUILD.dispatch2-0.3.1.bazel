@@ -103,9 +103,9 @@ rust_library(
     }),
     version = "0.3.1",
     deps = [
-        "@rules_rust_mutation_deps__bitflags-2.11.0//:bitflags",
-        "@rules_rust_mutation_deps__block2-0.6.2//:block2",
-        "@rules_rust_mutation_deps__libc-0.2.182//:libc",
-        "@rules_rust_mutation_deps__objc2-0.6.4//:objc2",
+        "@rules_rust_mutants_deps__bitflags-2.11.0//:bitflags",
+        "@rules_rust_mutants_deps__block2-0.6.2//:block2",
+        "@rules_rust_mutants_deps__libc-0.2.182//:libc",
+        "@rules_rust_mutants_deps__objc2-0.6.4//:objc2",
     ],
 )

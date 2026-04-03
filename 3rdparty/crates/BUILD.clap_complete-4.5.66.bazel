@@ -98,6 +98,6 @@ rust_library(
     }),
     version = "4.5.66",
     deps = [
-        "@rules_rust_mutation_deps__clap-4.5.60//:clap",
+        "@rules_rust_mutants_deps__clap-4.5.60//:clap",
     ],
 )

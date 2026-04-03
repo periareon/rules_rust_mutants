@@ -41,7 +41,7 @@ rust_library(
     crate_root = "src/lib.rs",
     edition = "2021",
     proc_macro_deps = [
-        "@rules_rust_mutation_deps__ref-cast-impl-1.0.25//:ref_cast_impl",
+        "@rules_rust_mutants_deps__ref-cast-impl-1.0.25//:ref_cast_impl",
     ],
     rustc_env_files = [
         ":cargo_toml_env_vars",
@@ -102,7 +102,7 @@ rust_library(
     }),
     version = "1.0.25",
     deps = [
-        "@rules_rust_mutation_deps__ref-cast-1.0.25//:build_script_build",
+        "@rules_rust_mutants_deps__ref-cast-1.0.25//:build_script_build",
     ],
 )
 

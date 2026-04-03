@@ -95,8 +95,8 @@ rust_library(
     }),
     version = "0.4.5",
     deps = [
-        "@rules_rust_mutation_deps__nu-ansi-term-0.50.3//:nu_ansi_term",
-        "@rules_rust_mutation_deps__strsim-0.11.1//:strsim",
-        "@rules_rust_mutation_deps__thiserror-2.0.18//:thiserror",
+        "@rules_rust_mutants_deps__nu-ansi-term-0.50.3//:nu_ansi_term",
+        "@rules_rust_mutants_deps__strsim-0.11.1//:strsim",
+        "@rules_rust_mutants_deps__thiserror-2.0.18//:thiserror",
     ],
 )

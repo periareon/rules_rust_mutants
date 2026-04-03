@@ -95,6 +95,6 @@ rust_library(
     }),
     version = "0.1.19",
     deps = [
-        "@rules_rust_mutation_deps__libc-0.2.182//:libc",
+        "@rules_rust_mutants_deps__libc-0.2.182//:libc",
     ],
 )

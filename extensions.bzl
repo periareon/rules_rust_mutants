@@ -1,4 +1,4 @@
-"""Bzlmod module extensions for rules_rust_mutation"""
+"""Bzlmod module extensions for rules_rust_mutants"""
 
 load("@bazel_features//:features.bzl", "bazel_features")
 load("//:repositories.bzl", "rust_mutation_dependencies")
@@ -18,6 +18,6 @@ def _rust_ext_impl(module_ctx):
     return module_ctx.extension_metadata(**metadata_kwargs)
 
 rust_ext = module_extension(
-    doc = "Dependencies for the rules_rust_mutation extension.",
+    doc = "Dependencies for the rules_rust_mutants extension.",
     implementation = _rust_ext_impl,
 )

@@ -98,6 +98,6 @@ rust_library(
     }),
     version = "0.6.9",
     deps = [
-        "@rules_rust_mutation_deps__serde-1.0.228//:serde",
+        "@rules_rust_mutants_deps__serde-1.0.228//:serde",
     ],
 )

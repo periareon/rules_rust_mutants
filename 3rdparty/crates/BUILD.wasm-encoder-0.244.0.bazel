@@ -100,7 +100,7 @@ rust_library(
     }),
     version = "0.244.0",
     deps = [
-        "@rules_rust_mutation_deps__leb128fmt-0.1.0//:leb128fmt",
-        "@rules_rust_mutation_deps__wasmparser-0.244.0//:wasmparser",
+        "@rules_rust_mutants_deps__leb128fmt-0.1.0//:leb128fmt",
+        "@rules_rust_mutants_deps__wasmparser-0.244.0//:wasmparser",
     ],
 )

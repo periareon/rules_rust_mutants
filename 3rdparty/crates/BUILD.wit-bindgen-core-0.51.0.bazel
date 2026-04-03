@@ -95,8 +95,8 @@ rust_library(
     }),
     version = "0.51.0",
     deps = [
-        "@rules_rust_mutation_deps__anyhow-1.0.102//:anyhow",
-        "@rules_rust_mutation_deps__heck-0.5.0//:heck",
-        "@rules_rust_mutation_deps__wit-parser-0.244.0//:wit_parser",
+        "@rules_rust_mutants_deps__anyhow-1.0.102//:anyhow",
+        "@rules_rust_mutants_deps__heck-0.5.0//:heck",
+        "@rules_rust_mutants_deps__wit-parser-0.244.0//:wit_parser",
     ],
 )

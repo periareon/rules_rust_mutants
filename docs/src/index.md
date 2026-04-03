@@ -38,13 +38,13 @@ Current behavior:
 ### Bzlmod
 
 ```python
-bazel_dep(name = "rules_rust_mutation", version = "{SEE_RELEASE_NOTES}")
+bazel_dep(name = "rules_rust_mutants", version = "{SEE_RELEASE_NOTES}")
 ```
 
 ### WORKSPACE
 
 ```python
-load("@rules_rust_mutation//:repositories.bzl", "rust_mutation_dependencies")
+load("@rules_rust_mutants//:repositories.bzl", "rust_mutation_dependencies")
 
 rust_mutation_dependencies()
 ```
@@ -53,7 +53,7 @@ rust_mutation_dependencies()
 
 ```python
 load("@rules_rust//rust:defs.bzl", "rust_library")
-load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 
 rust_library(
     name = "my_lib",

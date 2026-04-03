@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "1.6.0",
     deps = [
-        "@rules_rust_mutation_deps__borsh-1.6.0//:build_script_build",
+        "@rules_rust_mutants_deps__borsh-1.6.0//:build_script_build",
     ],
 )
 
@@ -154,7 +154,7 @@ cargo_build_script(
     version = "1.6.0",
     visibility = ["//visibility:private"],
     deps = [
-        "@rules_rust_mutation_deps__cfg_aliases-0.2.1//:cfg_aliases",
+        "@rules_rust_mutants_deps__cfg_aliases-0.2.1//:cfg_aliases",
     ],
 )
 

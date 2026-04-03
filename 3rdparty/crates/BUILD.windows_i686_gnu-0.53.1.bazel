@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "0.53.1",
     deps = [
-        "@rules_rust_mutation_deps__windows_i686_gnu-0.53.1//:build_script_build",
+        "@rules_rust_mutants_deps__windows_i686_gnu-0.53.1//:build_script_build",
     ],
 )
 

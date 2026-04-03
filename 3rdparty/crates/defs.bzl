@@ -295,47 +295,47 @@ def aliases(
 _NORMAL_DEPENDENCIES = {
     "": {
         _COMMON_CONDITION: {
-            "anyhow": Label("@rules_rust_mutation_deps//:anyhow-1.0.102"),
-            "camino": Label("@rules_rust_mutation_deps//:camino-1.2.2"),
-            "cargo_metadata": Label("@rules_rust_mutation_deps//:cargo_metadata-0.23.1"),
-            "clap": Label("@rules_rust_mutation_deps//:clap-4.5.60"),
-            "clap_complete": Label("@rules_rust_mutation_deps//:clap_complete-4.5.66"),
-            "color-print": Label("@rules_rust_mutation_deps//:color-print-0.3.7"),
-            "console": Label("@rules_rust_mutation_deps//:console-0.15.11"),
-            "ctrlc": Label("@rules_rust_mutation_deps//:ctrlc-3.5.2"),
-            "fastrand": Label("@rules_rust_mutation_deps//:fastrand-2.3.0"),
-            "flickzeug": Label("@rules_rust_mutation_deps//:flickzeug-0.4.5"),
-            "fs2": Label("@rules_rust_mutation_deps//:fs2-0.4.3"),
-            "globset": Label("@rules_rust_mutation_deps//:globset-0.4.18"),
-            "ignore": Label("@rules_rust_mutation_deps//:ignore-0.4.25"),
-            "itertools": Label("@rules_rust_mutation_deps//:itertools-0.13.0"),
-            "jiff": Label("@rules_rust_mutation_deps//:jiff-0.1.29"),
-            "jobserver": Label("@rules_rust_mutation_deps//:jobserver-0.1.34"),
-            "nextest-metadata": Label("@rules_rust_mutation_deps//:nextest-metadata-0.12.3"),
-            "num_cpus": Label("@rules_rust_mutation_deps//:num_cpus-1.17.0"),
-            "nutmeg": Label("@rules_rust_mutation_deps//:nutmeg-0.1.5"),
-            "path-slash": Label("@rules_rust_mutation_deps//:path-slash-0.2.1"),
-            "proc-macro2": Label("@rules_rust_mutation_deps//:proc-macro2-1.0.106"),
-            "quote": Label("@rules_rust_mutation_deps//:quote-1.0.44"),
-            "regex": Label("@rules_rust_mutation_deps//:regex-1.12.3"),
-            "schemars": Label("@rules_rust_mutation_deps//:schemars-0.9.0"),
-            "serde": Label("@rules_rust_mutation_deps//:serde-1.0.228"),
-            "serde_json": Label("@rules_rust_mutation_deps//:serde_json-1.0.149"),
-            "similar": Label("@rules_rust_mutation_deps//:similar-2.7.0"),
-            "strum": Label("@rules_rust_mutation_deps//:strum-0.26.3"),
-            "syn": Label("@rules_rust_mutation_deps//:syn-2.0.117"),
-            "tempfile": Label("@rules_rust_mutation_deps//:tempfile-3.26.0"),
-            "test-log": Label("@rules_rust_mutation_deps//:test-log-0.2.19"),
-            "toml": Label("@rules_rust_mutation_deps//:toml-0.8.23"),
-            "tracing": Label("@rules_rust_mutation_deps//:tracing-0.1.44"),
-            "tracing-subscriber": Label("@rules_rust_mutation_deps//:tracing-subscriber-0.3.22"),
-            "whoami": Label("@rules_rust_mutation_deps//:whoami-1.6.1"),
+            "anyhow": Label("@rules_rust_mutants_deps//:anyhow-1.0.102"),
+            "camino": Label("@rules_rust_mutants_deps//:camino-1.2.2"),
+            "cargo_metadata": Label("@rules_rust_mutants_deps//:cargo_metadata-0.23.1"),
+            "clap": Label("@rules_rust_mutants_deps//:clap-4.5.60"),
+            "clap_complete": Label("@rules_rust_mutants_deps//:clap_complete-4.5.66"),
+            "color-print": Label("@rules_rust_mutants_deps//:color-print-0.3.7"),
+            "console": Label("@rules_rust_mutants_deps//:console-0.15.11"),
+            "ctrlc": Label("@rules_rust_mutants_deps//:ctrlc-3.5.2"),
+            "fastrand": Label("@rules_rust_mutants_deps//:fastrand-2.3.0"),
+            "flickzeug": Label("@rules_rust_mutants_deps//:flickzeug-0.4.5"),
+            "fs2": Label("@rules_rust_mutants_deps//:fs2-0.4.3"),
+            "globset": Label("@rules_rust_mutants_deps//:globset-0.4.18"),
+            "ignore": Label("@rules_rust_mutants_deps//:ignore-0.4.25"),
+            "itertools": Label("@rules_rust_mutants_deps//:itertools-0.13.0"),
+            "jiff": Label("@rules_rust_mutants_deps//:jiff-0.1.29"),
+            "jobserver": Label("@rules_rust_mutants_deps//:jobserver-0.1.34"),
+            "nextest-metadata": Label("@rules_rust_mutants_deps//:nextest-metadata-0.12.3"),
+            "num_cpus": Label("@rules_rust_mutants_deps//:num_cpus-1.17.0"),
+            "nutmeg": Label("@rules_rust_mutants_deps//:nutmeg-0.1.5"),
+            "path-slash": Label("@rules_rust_mutants_deps//:path-slash-0.2.1"),
+            "proc-macro2": Label("@rules_rust_mutants_deps//:proc-macro2-1.0.106"),
+            "quote": Label("@rules_rust_mutants_deps//:quote-1.0.44"),
+            "regex": Label("@rules_rust_mutants_deps//:regex-1.12.3"),
+            "schemars": Label("@rules_rust_mutants_deps//:schemars-0.9.0"),
+            "serde": Label("@rules_rust_mutants_deps//:serde-1.0.228"),
+            "serde_json": Label("@rules_rust_mutants_deps//:serde_json-1.0.149"),
+            "similar": Label("@rules_rust_mutants_deps//:similar-2.7.0"),
+            "strum": Label("@rules_rust_mutants_deps//:strum-0.26.3"),
+            "syn": Label("@rules_rust_mutants_deps//:syn-2.0.117"),
+            "tempfile": Label("@rules_rust_mutants_deps//:tempfile-3.26.0"),
+            "test-log": Label("@rules_rust_mutants_deps//:test-log-0.2.19"),
+            "toml": Label("@rules_rust_mutants_deps//:toml-0.8.23"),
+            "tracing": Label("@rules_rust_mutants_deps//:tracing-0.1.44"),
+            "tracing-subscriber": Label("@rules_rust_mutants_deps//:tracing-subscriber-0.3.22"),
+            "whoami": Label("@rules_rust_mutants_deps//:whoami-1.6.1"),
         },
         "cfg(not(target_env = \"musl\"))": {
-            "reflink": Label("@rules_rust_mutation_deps//:reflink-0.1.3"),
+            "reflink": Label("@rules_rust_mutants_deps//:reflink-0.1.3"),
         },
         "cfg(unix)": {
-            "nix": Label("@rules_rust_mutation_deps//:nix-0.30.1"),
+            "nix": Label("@rules_rust_mutants_deps//:nix-0.30.1"),
         },
     },
     "mutants_attrs": {
@@ -358,15 +358,15 @@ _NORMAL_ALIASES = {
 _NORMAL_DEV_DEPENDENCIES = {
     "": {
         _COMMON_CONDITION: {
-            "assert_cmd": Label("@rules_rust_mutation_deps//:assert_cmd-2.1.2"),
-            "assert_matches": Label("@rules_rust_mutation_deps//:assert_matches-1.5.0"),
-            "cp_r": Label("@rules_rust_mutation_deps//:cp_r-0.5.2"),
-            "insta": Label("@rules_rust_mutation_deps//:insta-1.46.3"),
-            "lazy_static": Label("@rules_rust_mutation_deps//:lazy_static-1.5.0"),
-            "predicates": Label("@rules_rust_mutation_deps//:predicates-3.1.4"),
-            "pretty_assertions": Label("@rules_rust_mutation_deps//:pretty_assertions-1.4.1"),
-            "rusty-fork": Label("@rules_rust_mutation_deps//:rusty-fork-0.3.1"),
-            "walkdir": Label("@rules_rust_mutation_deps//:walkdir-2.5.0"),
+            "assert_cmd": Label("@rules_rust_mutants_deps//:assert_cmd-2.1.2"),
+            "assert_matches": Label("@rules_rust_mutants_deps//:assert_matches-1.5.0"),
+            "cp_r": Label("@rules_rust_mutants_deps//:cp_r-0.5.2"),
+            "insta": Label("@rules_rust_mutants_deps//:insta-1.46.3"),
+            "lazy_static": Label("@rules_rust_mutants_deps//:lazy_static-1.5.0"),
+            "predicates": Label("@rules_rust_mutants_deps//:predicates-3.1.4"),
+            "pretty_assertions": Label("@rules_rust_mutants_deps//:pretty_assertions-1.4.1"),
+            "rusty-fork": Label("@rules_rust_mutants_deps//:rusty-fork-0.3.1"),
+            "walkdir": Label("@rules_rust_mutants_deps//:walkdir-2.5.0"),
         },
     },
     "mutants_attrs": {
@@ -385,8 +385,8 @@ _NORMAL_DEV_ALIASES = {
 _PROC_MACRO_DEPENDENCIES = {
     "": {
         _COMMON_CONDITION: {
-            "indoc": Label("@rules_rust_mutation_deps//:indoc-2.0.7"),
-            "mutants": Label("@rules_rust_mutation_deps//:mutants-0.0.3"),
+            "indoc": Label("@rules_rust_mutants_deps//:indoc-2.0.7"),
+            "mutants": Label("@rules_rust_mutants_deps//:mutants-0.0.3"),
         },
     },
     "mutants_attrs": {
@@ -541,7 +541,7 @@ def crate_repositories():
     """
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__aho-corasick-1.1.4",
+        name = "rules_rust_mutants_deps__aho-corasick-1.1.4",
         sha256 = "ddd31a130427c27518df266943a5308ed92d4b226cc639f5a8f1002816174301",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/aho-corasick/1.1.4/download"],
@@ -551,7 +551,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__anstream-0.6.21",
+        name = "rules_rust_mutants_deps__anstream-0.6.21",
         sha256 = "43d5b281e737544384e969a5ccad3f1cdd24b48086a0fc1b2a5262a26b8f4f4a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/anstream/0.6.21/download"],
@@ -561,7 +561,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__anstyle-1.0.13",
+        name = "rules_rust_mutants_deps__anstyle-1.0.13",
         sha256 = "5192cca8006f1fd4f7237516f40fa183bb07f8fbdfedaa0036de5ea9b0b45e78",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/anstyle/1.0.13/download"],
@@ -571,7 +571,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__anstyle-parse-0.2.7",
+        name = "rules_rust_mutants_deps__anstyle-parse-0.2.7",
         sha256 = "4e7644824f0aa2c7b9384579234ef10eb7efb6a0deb83f9630a49594dd9c15c2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/anstyle-parse/0.2.7/download"],
@@ -581,7 +581,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__anstyle-query-1.1.5",
+        name = "rules_rust_mutants_deps__anstyle-query-1.1.5",
         sha256 = "40c48f72fd53cd289104fc64099abca73db4166ad86ea0b4341abe65af83dadc",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/anstyle-query/1.1.5/download"],
@@ -591,7 +591,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__anstyle-wincon-3.0.11",
+        name = "rules_rust_mutants_deps__anstyle-wincon-3.0.11",
         sha256 = "291e6a250ff86cd4a820112fb8898808a366d8f9f58ce16d1f538353ad55747d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/anstyle-wincon/3.0.11/download"],
@@ -601,7 +601,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__anyhow-1.0.102",
+        name = "rules_rust_mutants_deps__anyhow-1.0.102",
         sha256 = "7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/anyhow/1.0.102/download"],
@@ -611,7 +611,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__assert_cmd-2.1.2",
+        name = "rules_rust_mutants_deps__assert_cmd-2.1.2",
         sha256 = "9c5bcfa8749ac45dd12cb11055aeeb6b27a3895560d60d71e3c23bf979e60514",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/assert_cmd/2.1.2/download"],
@@ -621,7 +621,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__assert_matches-1.5.0",
+        name = "rules_rust_mutants_deps__assert_matches-1.5.0",
         sha256 = "9b34d609dfbaf33d6889b2b7106d3ca345eacad44200913df5ba02bfd31d2ba9",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/assert_matches/1.5.0/download"],
@@ -631,7 +631,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__atty-0.2.14",
+        name = "rules_rust_mutants_deps__atty-0.2.14",
         sha256 = "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/atty/0.2.14/download"],
@@ -641,7 +641,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__autocfg-1.5.0",
+        name = "rules_rust_mutants_deps__autocfg-1.5.0",
         sha256 = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/autocfg/1.5.0/download"],
@@ -651,7 +651,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__bitflags-1.3.2",
+        name = "rules_rust_mutants_deps__bitflags-1.3.2",
         sha256 = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/bitflags/1.3.2/download"],
@@ -661,7 +661,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__bitflags-2.11.0",
+        name = "rules_rust_mutants_deps__bitflags-2.11.0",
         sha256 = "843867be96c8daad0d758b57df9392b6d8d271134fce549de6ce169ff98a92af",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/bitflags/2.11.0/download"],
@@ -671,7 +671,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__block2-0.6.2",
+        name = "rules_rust_mutants_deps__block2-0.6.2",
         sha256 = "cdeb9d870516001442e364c5220d3574d2da8dc765554b4a617230d33fa58ef5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/block2/0.6.2/download"],
@@ -681,7 +681,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__borsh-1.6.0",
+        name = "rules_rust_mutants_deps__borsh-1.6.0",
         sha256 = "d1da5ab77c1437701eeff7c88d968729e7766172279eab0676857b3d63af7a6f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/borsh/1.6.0/download"],
@@ -691,7 +691,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__bstr-1.12.1",
+        name = "rules_rust_mutants_deps__bstr-1.12.1",
         sha256 = "63044e1ae8e69f3b5a92c736ca6269b8d12fa7efe39bf34ddb06d102cf0e2cab",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/bstr/1.12.1/download"],
@@ -701,7 +701,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__bumpalo-3.20.2",
+        name = "rules_rust_mutants_deps__bumpalo-3.20.2",
         sha256 = "5d20789868f4b01b2f2caec9f5c4e0213b41e3e5702a50157d699ae31ced2fcb",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/bumpalo/3.20.2/download"],
@@ -711,7 +711,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__camino-1.2.2",
+        name = "rules_rust_mutants_deps__camino-1.2.2",
         sha256 = "e629a66d692cb9ff1a1c664e41771b3dcaf961985a9774c0eb0bd1b51cf60a48",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/camino/1.2.2/download"],
@@ -721,7 +721,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__cargo-platform-0.3.2",
+        name = "rules_rust_mutants_deps__cargo-platform-0.3.2",
         sha256 = "87a0c0e6148f11f01f32650a2ea02d532b2ad4e81d8bd41e6e565b5adc5e6082",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/cargo-platform/0.3.2/download"],
@@ -731,7 +731,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__cargo_metadata-0.23.1",
+        name = "rules_rust_mutants_deps__cargo_metadata-0.23.1",
         sha256 = "ef987d17b0a113becdd19d3d0022d04d7ef41f9efe4f3fb63ac44ba61df3ade9",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/cargo_metadata/0.23.1/download"],
@@ -741,7 +741,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__cfg-expr-0.20.6",
+        name = "rules_rust_mutants_deps__cfg-expr-0.20.6",
         sha256 = "78cef5b5a1a6827c7322ae2a636368a573006b27cfa76c7ebd53e834daeaab6a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/cfg-expr/0.20.6/download"],
@@ -751,7 +751,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__cfg-if-1.0.4",
+        name = "rules_rust_mutants_deps__cfg-if-1.0.4",
         sha256 = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/cfg-if/1.0.4/download"],
@@ -761,7 +761,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__cfg_aliases-0.2.1",
+        name = "rules_rust_mutants_deps__cfg_aliases-0.2.1",
         sha256 = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/cfg_aliases/0.2.1/download"],
@@ -771,7 +771,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__clap-4.5.60",
+        name = "rules_rust_mutants_deps__clap-4.5.60",
         sha256 = "2797f34da339ce31042b27d23607e051786132987f595b02ba4f6a6dffb7030a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/clap/4.5.60/download"],
@@ -781,7 +781,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__clap_builder-4.5.60",
+        name = "rules_rust_mutants_deps__clap_builder-4.5.60",
         sha256 = "24a241312cea5059b13574bb9b3861cabf758b879c15190b37b6d6fd63ab6876",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/clap_builder/4.5.60/download"],
@@ -791,7 +791,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__clap_complete-4.5.66",
+        name = "rules_rust_mutants_deps__clap_complete-4.5.66",
         sha256 = "c757a3b7e39161a4e56f9365141ada2a6c915a8622c408ab6bb4b5d047371031",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/clap_complete/4.5.66/download"],
@@ -801,7 +801,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__clap_derive-4.5.55",
+        name = "rules_rust_mutants_deps__clap_derive-4.5.55",
         sha256 = "a92793da1a46a5f2a02a6f4c46c6496b28c43638adea8306fcb0caa1634f24e5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/clap_derive/4.5.55/download"],
@@ -811,7 +811,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__clap_lex-1.0.0",
+        name = "rules_rust_mutants_deps__clap_lex-1.0.0",
         sha256 = "3a822ea5bc7590f9d40f1ba12c0dc3c2760f3482c6984db1573ad11031420831",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/clap_lex/1.0.0/download"],
@@ -821,7 +821,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__color-print-0.3.7",
+        name = "rules_rust_mutants_deps__color-print-0.3.7",
         sha256 = "3aa954171903797d5623e047d9ab69d91b493657917bdfb8c2c80ecaf9cdb6f4",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/color-print/0.3.7/download"],
@@ -831,7 +831,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__color-print-proc-macro-0.3.7",
+        name = "rules_rust_mutants_deps__color-print-proc-macro-0.3.7",
         sha256 = "692186b5ebe54007e45a59aea47ece9eb4108e141326c304cdc91699a7118a22",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/color-print-proc-macro/0.3.7/download"],
@@ -841,7 +841,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__colorchoice-1.0.4",
+        name = "rules_rust_mutants_deps__colorchoice-1.0.4",
         sha256 = "b05b61dc5112cbb17e4b6cd61790d9845d13888356391624cbe7e41efeac1e75",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/colorchoice/1.0.4/download"],
@@ -851,7 +851,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__console-0.15.11",
+        name = "rules_rust_mutants_deps__console-0.15.11",
         sha256 = "054ccb5b10f9f2cbf51eb355ca1d05c2d279ce1804688d0db74b4733a5aeafd8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/console/0.15.11/download"],
@@ -861,7 +861,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__cp_r-0.5.2",
+        name = "rules_rust_mutants_deps__cp_r-0.5.2",
         sha256 = "837ca07dfd27a2663ac7c4701bb35856b534c2a61dd47af06ccf65d3bec79ebc",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/cp_r/0.5.2/download"],
@@ -871,7 +871,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__crossbeam-deque-0.8.6",
+        name = "rules_rust_mutants_deps__crossbeam-deque-0.8.6",
         sha256 = "9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/crossbeam-deque/0.8.6/download"],
@@ -881,7 +881,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__crossbeam-epoch-0.9.18",
+        name = "rules_rust_mutants_deps__crossbeam-epoch-0.9.18",
         sha256 = "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/crossbeam-epoch/0.9.18/download"],
@@ -891,7 +891,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__crossbeam-utils-0.8.21",
+        name = "rules_rust_mutants_deps__crossbeam-utils-0.8.21",
         sha256 = "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/crossbeam-utils/0.8.21/download"],
@@ -901,7 +901,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__ctrlc-3.5.2",
+        name = "rules_rust_mutants_deps__ctrlc-3.5.2",
         sha256 = "e0b1fab2ae45819af2d0731d60f2afe17227ebb1a1538a236da84c93e9a60162",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/ctrlc/3.5.2/download"],
@@ -911,7 +911,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__diff-0.1.13",
+        name = "rules_rust_mutants_deps__diff-0.1.13",
         sha256 = "56254986775e3233ffa9c4d7d3faaf6d36a2c09d30b20687e9f88bc8bafc16c8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/diff/0.1.13/download"],
@@ -921,7 +921,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__difflib-0.4.0",
+        name = "rules_rust_mutants_deps__difflib-0.4.0",
         sha256 = "6184e33543162437515c2e2b48714794e37845ec9851711914eec9d308f6ebe8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/difflib/0.4.0/download"],
@@ -931,7 +931,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__dispatch2-0.3.1",
+        name = "rules_rust_mutants_deps__dispatch2-0.3.1",
         sha256 = "1e0e367e4e7da84520dedcac1901e4da967309406d1e51017ae1abfb97adbd38",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/dispatch2/0.3.1/download"],
@@ -941,7 +941,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__dyn-clone-1.0.20",
+        name = "rules_rust_mutants_deps__dyn-clone-1.0.20",
         sha256 = "d0881ea181b1df73ff77ffaaf9c7544ecc11e82fba9b5f27b262a3c73a332555",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/dyn-clone/1.0.20/download"],
@@ -951,7 +951,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__either-1.15.0",
+        name = "rules_rust_mutants_deps__either-1.15.0",
         sha256 = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/either/1.15.0/download"],
@@ -961,7 +961,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__encode_unicode-1.0.0",
+        name = "rules_rust_mutants_deps__encode_unicode-1.0.0",
         sha256 = "34aa73646ffb006b8f5147f3dc182bd4bcb190227ce861fc4a4844bf8e3cb2c0",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/encode_unicode/1.0.0/download"],
@@ -971,7 +971,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__env_filter-1.0.0",
+        name = "rules_rust_mutants_deps__env_filter-1.0.0",
         sha256 = "7a1c3cc8e57274ec99de65301228b537f1e4eedc1b8e0f9411c6caac8ae7308f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/env_filter/1.0.0/download"],
@@ -981,7 +981,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__env_logger-0.11.9",
+        name = "rules_rust_mutants_deps__env_logger-0.11.9",
         sha256 = "b2daee4ea451f429a58296525ddf28b45a3b64f1acf6587e2067437bb11e218d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/env_logger/0.11.9/download"],
@@ -991,7 +991,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__equivalent-1.0.2",
+        name = "rules_rust_mutants_deps__equivalent-1.0.2",
         sha256 = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/equivalent/1.0.2/download"],
@@ -1001,7 +1001,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__errno-0.3.14",
+        name = "rules_rust_mutants_deps__errno-0.3.14",
         sha256 = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/errno/0.3.14/download"],
@@ -1011,7 +1011,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__fastrand-2.3.0",
+        name = "rules_rust_mutants_deps__fastrand-2.3.0",
         sha256 = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/fastrand/2.3.0/download"],
@@ -1021,7 +1021,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__filetime-0.2.27",
+        name = "rules_rust_mutants_deps__filetime-0.2.27",
         sha256 = "f98844151eee8917efc50bd9e8318cb963ae8b297431495d3f758616ea5c57db",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/filetime/0.2.27/download"],
@@ -1031,7 +1031,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__flickzeug-0.4.5",
+        name = "rules_rust_mutants_deps__flickzeug-0.4.5",
         sha256 = "f874fe839fc904039c11cf7db845355b3ba58c672a295b3559009ebddf29eb2c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/flickzeug/0.4.5/download"],
@@ -1041,7 +1041,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__float-cmp-0.10.0",
+        name = "rules_rust_mutants_deps__float-cmp-0.10.0",
         sha256 = "b09cf3155332e944990140d967ff5eceb70df778b34f77d8075db46e4704e6d8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/float-cmp/0.10.0/download"],
@@ -1051,7 +1051,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__fnv-1.0.7",
+        name = "rules_rust_mutants_deps__fnv-1.0.7",
         sha256 = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/fnv/1.0.7/download"],
@@ -1061,7 +1061,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__foldhash-0.1.5",
+        name = "rules_rust_mutants_deps__foldhash-0.1.5",
         sha256 = "d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/foldhash/0.1.5/download"],
@@ -1071,7 +1071,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__fs2-0.4.3",
+        name = "rules_rust_mutants_deps__fs2-0.4.3",
         sha256 = "9564fc758e15025b46aa6643b1b77d047d1a56a1aea6e01002ac0c7026876213",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/fs2/0.4.3/download"],
@@ -1081,7 +1081,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__getrandom-0.3.4",
+        name = "rules_rust_mutants_deps__getrandom-0.3.4",
         sha256 = "899def5c37c4fd7b2664648c28120ecec138e4d395b459e5ca34f9cce2dd77fd",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/getrandom/0.3.4/download"],
@@ -1091,7 +1091,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__getrandom-0.4.1",
+        name = "rules_rust_mutants_deps__getrandom-0.4.1",
         sha256 = "139ef39800118c7683f2fd3c98c1b23c09ae076556b435f8e9064ae108aaeeec",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/getrandom/0.4.1/download"],
@@ -1101,7 +1101,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__globset-0.4.18",
+        name = "rules_rust_mutants_deps__globset-0.4.18",
         sha256 = "52dfc19153a48bde0cbd630453615c8151bce3a5adfac7a0aebfbf0a1e1f57e3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/globset/0.4.18/download"],
@@ -1111,7 +1111,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__guppy-workspace-hack-0.1.0",
+        name = "rules_rust_mutants_deps__guppy-workspace-hack-0.1.0",
         sha256 = "92620684d99f750bae383ecb3be3748142d6095760afd5cbcf2261e9a279d780",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/guppy-workspace-hack/0.1.0/download"],
@@ -1121,7 +1121,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__hashbrown-0.15.5",
+        name = "rules_rust_mutants_deps__hashbrown-0.15.5",
         sha256 = "9229cfe53dfd69f0609a49f65461bd93001ea1ef889cd5529dd176593f5338a1",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/hashbrown/0.15.5/download"],
@@ -1131,7 +1131,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__hashbrown-0.16.1",
+        name = "rules_rust_mutants_deps__hashbrown-0.16.1",
         sha256 = "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/hashbrown/0.16.1/download"],
@@ -1141,7 +1141,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__heck-0.5.0",
+        name = "rules_rust_mutants_deps__heck-0.5.0",
         sha256 = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/heck/0.5.0/download"],
@@ -1151,7 +1151,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__hermit-abi-0.1.19",
+        name = "rules_rust_mutants_deps__hermit-abi-0.1.19",
         sha256 = "62b467343b94ba476dcb2500d242dadbb39557df889310ac77c5d99100aaac33",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/hermit-abi/0.1.19/download"],
@@ -1161,7 +1161,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__hermit-abi-0.3.9",
+        name = "rules_rust_mutants_deps__hermit-abi-0.3.9",
         sha256 = "d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/hermit-abi/0.3.9/download"],
@@ -1171,7 +1171,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__hermit-abi-0.5.2",
+        name = "rules_rust_mutants_deps__hermit-abi-0.5.2",
         sha256 = "fc0fef456e4baa96da950455cd02c081ca953b141298e41db3fc7e36b1da849c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/hermit-abi/0.5.2/download"],
@@ -1181,7 +1181,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__id-arena-2.3.0",
+        name = "rules_rust_mutants_deps__id-arena-2.3.0",
         sha256 = "3d3067d79b975e8844ca9eb072e16b31c3c1c36928edf9c6789548c524d0d954",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/id-arena/2.3.0/download"],
@@ -1191,7 +1191,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__ignore-0.4.25",
+        name = "rules_rust_mutants_deps__ignore-0.4.25",
         sha256 = "d3d782a365a015e0f5c04902246139249abf769125006fbe7649e2ee88169b4a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/ignore/0.4.25/download"],
@@ -1201,7 +1201,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__indexmap-2.13.0",
+        name = "rules_rust_mutants_deps__indexmap-2.13.0",
         sha256 = "7714e70437a7dc3ac8eb7e6f8df75fd8eb422675fc7678aff7364301092b1017",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/indexmap/2.13.0/download"],
@@ -1211,7 +1211,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__indoc-2.0.7",
+        name = "rules_rust_mutants_deps__indoc-2.0.7",
         sha256 = "79cf5c93f93228cf8efb3ba362535fb11199ac548a09ce117c9b1adc3030d706",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/indoc/2.0.7/download"],
@@ -1221,7 +1221,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__insta-1.46.3",
+        name = "rules_rust_mutants_deps__insta-1.46.3",
         sha256 = "e82db8c87c7f1ccecb34ce0c24399b8a73081427f3c7c50a5d597925356115e4",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/insta/1.46.3/download"],
@@ -1231,7 +1231,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__io-lifetimes-1.0.11",
+        name = "rules_rust_mutants_deps__io-lifetimes-1.0.11",
         sha256 = "eae7b9aee968036d54dce06cebaefd919e4472e753296daccd6d344e3e2df0c2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/io-lifetimes/1.0.11/download"],
@@ -1241,7 +1241,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__is_terminal_polyfill-1.70.2",
+        name = "rules_rust_mutants_deps__is_terminal_polyfill-1.70.2",
         sha256 = "a6cb138bb79a146c1bd460005623e142ef0181e3d0219cb493e02f7d08a35695",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/is_terminal_polyfill/1.70.2/download"],
@@ -1251,7 +1251,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__itertools-0.13.0",
+        name = "rules_rust_mutants_deps__itertools-0.13.0",
         sha256 = "413ee7dfc52ee1a4949ceeb7dbc8a33f2d6c088194d9f922fb8318faf1f01186",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/itertools/0.13.0/download"],
@@ -1261,7 +1261,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__itoa-1.0.17",
+        name = "rules_rust_mutants_deps__itoa-1.0.17",
         sha256 = "92ecc6618181def0457392ccd0ee51198e065e016d1d527a7ac1b6dc7c1f09d2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/itoa/1.0.17/download"],
@@ -1271,7 +1271,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__jiff-0.1.29",
+        name = "rules_rust_mutants_deps__jiff-0.1.29",
         sha256 = "c04ef77ae73f3cf50510712722f0c4e8b46f5aaa1bf5ffad2ae213e6495e78e5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/jiff/0.1.29/download"],
@@ -1281,7 +1281,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__jobserver-0.1.34",
+        name = "rules_rust_mutants_deps__jobserver-0.1.34",
         sha256 = "9afb3de4395d6b3e67a780b6de64b51c978ecf11cb9a462c66be7d4ca9039d33",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/jobserver/0.1.34/download"],
@@ -1291,7 +1291,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__js-sys-0.3.91",
+        name = "rules_rust_mutants_deps__js-sys-0.3.91",
         sha256 = "b49715b7073f385ba4bc528e5747d02e66cb39c6146efb66b781f131f0fb399c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/js-sys/0.3.91/download"],
@@ -1301,7 +1301,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__lazy_static-1.5.0",
+        name = "rules_rust_mutants_deps__lazy_static-1.5.0",
         sha256 = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/lazy_static/1.5.0/download"],
@@ -1311,7 +1311,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__leb128fmt-0.1.0",
+        name = "rules_rust_mutants_deps__leb128fmt-0.1.0",
         sha256 = "09edd9e8b54e49e587e4f6295a7d29c3ea94d469cb40ab8ca70b288248a81db2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/leb128fmt/0.1.0/download"],
@@ -1321,7 +1321,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__libc-0.2.182",
+        name = "rules_rust_mutants_deps__libc-0.2.182",
         sha256 = "6800badb6cb2082ffd7b6a67e6125bb39f18782f793520caee8cb8846be06112",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/libc/0.2.182/download"],
@@ -1331,7 +1331,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__libredox-0.1.14",
+        name = "rules_rust_mutants_deps__libredox-0.1.14",
         sha256 = "1744e39d1d6a9948f4f388969627434e31128196de472883b39f148769bfe30a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/libredox/0.1.14/download"],
@@ -1341,7 +1341,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__linux-raw-sys-0.12.1",
+        name = "rules_rust_mutants_deps__linux-raw-sys-0.12.1",
         sha256 = "32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/linux-raw-sys/0.12.1/download"],
@@ -1351,7 +1351,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__linux-raw-sys-0.3.8",
+        name = "rules_rust_mutants_deps__linux-raw-sys-0.3.8",
         sha256 = "ef53942eb7bf7ff43a617b3e2c1c4a5ecf5944a7c1bc12d7ee39bbb15e5c1519",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/linux-raw-sys/0.3.8/download"],
@@ -1361,7 +1361,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__log-0.4.29",
+        name = "rules_rust_mutants_deps__log-0.4.29",
         sha256 = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/log/0.4.29/download"],
@@ -1371,7 +1371,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__matchers-0.2.0",
+        name = "rules_rust_mutants_deps__matchers-0.2.0",
         sha256 = "d1525a2a28c7f4fa0fc98bb91ae755d1e2d1505079e05539e35bc876b5d65ae9",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/matchers/0.2.0/download"],
@@ -1381,7 +1381,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__memchr-2.8.0",
+        name = "rules_rust_mutants_deps__memchr-2.8.0",
         sha256 = "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/memchr/2.8.0/download"],
@@ -1391,7 +1391,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__minimal-lexical-0.2.1",
+        name = "rules_rust_mutants_deps__minimal-lexical-0.2.1",
         sha256 = "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/minimal-lexical/0.2.1/download"],
@@ -1401,7 +1401,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__mutants-0.0.3",
+        name = "rules_rust_mutants_deps__mutants-0.0.3",
         sha256 = "bc0287524726960e07b119cebd01678f852f147742ae0d925e6a520dca956126",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/mutants/0.0.3/download"],
@@ -1411,7 +1411,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nextest-metadata-0.12.3",
+        name = "rules_rust_mutants_deps__nextest-metadata-0.12.3",
         sha256 = "2725d07ba30cabadad8e4219185a5a14dbc478e32ea72af4eb89d63f9705ca7f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nextest-metadata/0.12.3/download"],
@@ -1421,7 +1421,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nextest-workspace-hack-0.1.0",
+        name = "rules_rust_mutants_deps__nextest-workspace-hack-0.1.0",
         sha256 = "d906846a98739ed9d73d66e62c2641eef8321f1734b7a1156ab045a0248fb2b3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nextest-workspace-hack/0.1.0/download"],
@@ -1431,7 +1431,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nix-0.30.1",
+        name = "rules_rust_mutants_deps__nix-0.30.1",
         sha256 = "74523f3a35e05aba87a1d978330aef40f67b0304ac79c1c00b294c9830543db6",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nix/0.30.1/download"],
@@ -1441,7 +1441,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nix-0.31.2",
+        name = "rules_rust_mutants_deps__nix-0.31.2",
         sha256 = "5d6d0705320c1e6ba1d912b5e37cf18071b6c2e9b7fa8215a1e8a7651966f5d3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nix/0.31.2/download"],
@@ -1451,7 +1451,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nom-7.1.3",
+        name = "rules_rust_mutants_deps__nom-7.1.3",
         sha256 = "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nom/7.1.3/download"],
@@ -1461,7 +1461,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__normalize-line-endings-0.3.0",
+        name = "rules_rust_mutants_deps__normalize-line-endings-0.3.0",
         sha256 = "61807f77802ff30975e01f4f071c8ba10c022052f98b3294119f3e615d13e5be",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/normalize-line-endings/0.3.0/download"],
@@ -1471,7 +1471,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nu-ansi-term-0.50.3",
+        name = "rules_rust_mutants_deps__nu-ansi-term-0.50.3",
         sha256 = "7957b9740744892f114936ab4a57b3f487491bbeafaf8083688b16841a4240e5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nu-ansi-term/0.50.3/download"],
@@ -1481,7 +1481,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__num-traits-0.2.19",
+        name = "rules_rust_mutants_deps__num-traits-0.2.19",
         sha256 = "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/num-traits/0.2.19/download"],
@@ -1491,7 +1491,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__num_cpus-1.17.0",
+        name = "rules_rust_mutants_deps__num_cpus-1.17.0",
         sha256 = "91df4bbde75afed763b708b7eee1e8e7651e02d97f6d5dd763e89367e957b23b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/num_cpus/1.17.0/download"],
@@ -1501,7 +1501,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__nutmeg-0.1.5",
+        name = "rules_rust_mutants_deps__nutmeg-0.1.5",
         sha256 = "2d739ff27e8a6012737151871baad943516705b9ad100ab9e452dbe70ebf0e7b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/nutmeg/0.1.5/download"],
@@ -1511,7 +1511,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__objc2-0.6.4",
+        name = "rules_rust_mutants_deps__objc2-0.6.4",
         sha256 = "3a12a8ed07aefc768292f076dc3ac8c48f3781c8f2d5851dd3d98950e8c5a89f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/objc2/0.6.4/download"],
@@ -1521,7 +1521,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__objc2-encode-4.1.0",
+        name = "rules_rust_mutants_deps__objc2-encode-4.1.0",
         sha256 = "ef25abbcd74fb2609453eb695bd2f860d389e457f67dc17cafc8b8cbc89d0c33",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/objc2-encode/4.1.0/download"],
@@ -1531,7 +1531,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__once_cell-1.21.3",
+        name = "rules_rust_mutants_deps__once_cell-1.21.3",
         sha256 = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/once_cell/1.21.3/download"],
@@ -1541,7 +1541,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__once_cell_polyfill-1.70.2",
+        name = "rules_rust_mutants_deps__once_cell_polyfill-1.70.2",
         sha256 = "384b8ab6d37215f3c5301a95a4accb5d64aa607f1fcb26a11b5303878451b4fe",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/once_cell_polyfill/1.70.2/download"],
@@ -1551,7 +1551,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__path-slash-0.2.1",
+        name = "rules_rust_mutants_deps__path-slash-0.2.1",
         sha256 = "1e91099d4268b0e11973f036e885d652fb0b21fedcf69738c627f94db6a44f42",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/path-slash/0.2.1/download"],
@@ -1561,7 +1561,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__pin-project-lite-0.2.17",
+        name = "rules_rust_mutants_deps__pin-project-lite-0.2.17",
         sha256 = "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/pin-project-lite/0.2.17/download"],
@@ -1571,7 +1571,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__plain-0.2.3",
+        name = "rules_rust_mutants_deps__plain-0.2.3",
         sha256 = "b4596b6d070b27117e987119b4dac604f3c58cfb0b191112e24771b2faeac1a6",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/plain/0.2.3/download"],
@@ -1581,7 +1581,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__portable-atomic-1.13.1",
+        name = "rules_rust_mutants_deps__portable-atomic-1.13.1",
         sha256 = "c33a9471896f1c69cecef8d20cbe2f7accd12527ce60845ff44c153bb2a21b49",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/portable-atomic/1.13.1/download"],
@@ -1591,7 +1591,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__portable-atomic-util-0.2.5",
+        name = "rules_rust_mutants_deps__portable-atomic-util-0.2.5",
         sha256 = "7a9db96d7fa8782dd8c15ce32ffe8680bbd1e978a43bf51a34d39483540495f5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/portable-atomic-util/0.2.5/download"],
@@ -1601,7 +1601,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__predicates-3.1.4",
+        name = "rules_rust_mutants_deps__predicates-3.1.4",
         sha256 = "ada8f2932f28a27ee7b70dd6c1c39ea0675c55a36879ab92f3a715eaa1e63cfe",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/predicates/3.1.4/download"],
@@ -1611,7 +1611,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__predicates-core-1.0.10",
+        name = "rules_rust_mutants_deps__predicates-core-1.0.10",
         sha256 = "cad38746f3166b4031b1a0d39ad9f954dd291e7854fcc0eed52ee41a0b50d144",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/predicates-core/1.0.10/download"],
@@ -1621,7 +1621,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__predicates-tree-1.0.13",
+        name = "rules_rust_mutants_deps__predicates-tree-1.0.13",
         sha256 = "d0de1b847b39c8131db0467e9df1ff60e6d0562ab8e9a16e568ad0fdb372e2f2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/predicates-tree/1.0.13/download"],
@@ -1631,7 +1631,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__pretty_assertions-1.4.1",
+        name = "rules_rust_mutants_deps__pretty_assertions-1.4.1",
         sha256 = "3ae130e2f271fbc2ac3a40fb1d07180839cdbbe443c7a27e1e3c13c5cac0116d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/pretty_assertions/1.4.1/download"],
@@ -1641,7 +1641,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__prettyplease-0.2.37",
+        name = "rules_rust_mutants_deps__prettyplease-0.2.37",
         sha256 = "479ca8adacdd7ce8f1fb39ce9ecccbfe93a3f1344b3d0d97f20bc0196208f62b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/prettyplease/0.2.37/download"],
@@ -1651,7 +1651,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__proc-macro2-1.0.106",
+        name = "rules_rust_mutants_deps__proc-macro2-1.0.106",
         sha256 = "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/proc-macro2/1.0.106/download"],
@@ -1661,7 +1661,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__quick-error-1.2.3",
+        name = "rules_rust_mutants_deps__quick-error-1.2.3",
         sha256 = "a1d01941d82fa2ab50be1e79e6714289dd7cde78eba4c074bc5a4374f650dfe0",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/quick-error/1.2.3/download"],
@@ -1671,7 +1671,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__quote-1.0.44",
+        name = "rules_rust_mutants_deps__quote-1.0.44",
         sha256 = "21b2ebcf727b7760c461f091f9f0f539b77b8e87f2fd88131e7f1b433b3cece4",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/quote/1.0.44/download"],
@@ -1681,7 +1681,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__r-efi-5.3.0",
+        name = "rules_rust_mutants_deps__r-efi-5.3.0",
         sha256 = "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/r-efi/5.3.0/download"],
@@ -1691,7 +1691,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__redox_syscall-0.7.3",
+        name = "rules_rust_mutants_deps__redox_syscall-0.7.3",
         sha256 = "6ce70a74e890531977d37e532c34d45e9055d2409ed08ddba14529471ed0be16",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/redox_syscall/0.7.3/download"],
@@ -1701,7 +1701,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__ref-cast-1.0.25",
+        name = "rules_rust_mutants_deps__ref-cast-1.0.25",
         sha256 = "f354300ae66f76f1c85c5f84693f0ce81d747e2c3f21a45fef496d89c960bf7d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/ref-cast/1.0.25/download"],
@@ -1711,7 +1711,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__ref-cast-impl-1.0.25",
+        name = "rules_rust_mutants_deps__ref-cast-impl-1.0.25",
         sha256 = "b7186006dcb21920990093f30e3dea63b7d6e977bf1256be20c3563a5db070da",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/ref-cast-impl/1.0.25/download"],
@@ -1721,7 +1721,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__reflink-0.1.3",
+        name = "rules_rust_mutants_deps__reflink-0.1.3",
         sha256 = "bc585ec28b565b4c28977ce8363a6636cedc280351ba25a7915f6c9f37f68cbe",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/reflink/0.1.3/download"],
@@ -1731,7 +1731,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__regex-1.12.3",
+        name = "rules_rust_mutants_deps__regex-1.12.3",
         sha256 = "e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/regex/1.12.3/download"],
@@ -1741,7 +1741,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__regex-automata-0.4.14",
+        name = "rules_rust_mutants_deps__regex-automata-0.4.14",
         sha256 = "6e1dd4122fc1595e8162618945476892eefca7b88c52820e74af6262213cae8f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/regex-automata/0.4.14/download"],
@@ -1751,7 +1751,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__regex-syntax-0.8.10",
+        name = "rules_rust_mutants_deps__regex-syntax-0.8.10",
         sha256 = "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/regex-syntax/0.8.10/download"],
@@ -1761,7 +1761,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__rustix-0.37.28",
+        name = "rules_rust_mutants_deps__rustix-0.37.28",
         sha256 = "519165d378b97752ca44bbe15047d5d3409e875f39327546b42ac81d7e18c1b6",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/rustix/0.37.28/download"],
@@ -1771,7 +1771,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__rustix-1.1.4",
+        name = "rules_rust_mutants_deps__rustix-1.1.4",
         sha256 = "b6fe4565b9518b83ef4f91bb47ce29620ca828bd32cb7e408f0062e9930ba190",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/rustix/1.1.4/download"],
@@ -1781,7 +1781,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__rustversion-1.0.22",
+        name = "rules_rust_mutants_deps__rustversion-1.0.22",
         sha256 = "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/rustversion/1.0.22/download"],
@@ -1791,7 +1791,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__rusty-fork-0.3.1",
+        name = "rules_rust_mutants_deps__rusty-fork-0.3.1",
         sha256 = "cc6bf79ff24e648f6da1f8d1f011e9cac26491b619e6b9280f2b47f1774e6ee2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/rusty-fork/0.3.1/download"],
@@ -1801,7 +1801,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__same-file-1.0.6",
+        name = "rules_rust_mutants_deps__same-file-1.0.6",
         sha256 = "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/same-file/1.0.6/download"],
@@ -1811,7 +1811,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__schemars-0.9.0",
+        name = "rules_rust_mutants_deps__schemars-0.9.0",
         sha256 = "4cd191f9397d57d581cddd31014772520aa448f65ef991055d7f61582c65165f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/schemars/0.9.0/download"],
@@ -1821,7 +1821,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__schemars_derive-0.9.0",
+        name = "rules_rust_mutants_deps__schemars_derive-0.9.0",
         sha256 = "5016d94c77c6d32f0b8e08b781f7dc8a90c2007d4e77472cc2807bc10a8438fe",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/schemars_derive/0.9.0/download"],
@@ -1831,7 +1831,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__semver-1.0.27",
+        name = "rules_rust_mutants_deps__semver-1.0.27",
         sha256 = "d767eb0aabc880b29956c35734170f26ed551a859dbd361d140cdbeca61ab1e2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/semver/1.0.27/download"],
@@ -1841,7 +1841,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__serde-1.0.228",
+        name = "rules_rust_mutants_deps__serde-1.0.228",
         sha256 = "9a8e94ea7f378bd32cbbd37198a4a91436180c5bb472411e48b5ec2e2124ae9e",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/serde/1.0.228/download"],
@@ -1851,7 +1851,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__serde_core-1.0.228",
+        name = "rules_rust_mutants_deps__serde_core-1.0.228",
         sha256 = "41d385c7d4ca58e59fc732af25c3983b67ac852c1a25000afe1175de458b67ad",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/serde_core/1.0.228/download"],
@@ -1861,7 +1861,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__serde_derive-1.0.228",
+        name = "rules_rust_mutants_deps__serde_derive-1.0.228",
         sha256 = "d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/serde_derive/1.0.228/download"],
@@ -1871,7 +1871,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__serde_derive_internals-0.29.1",
+        name = "rules_rust_mutants_deps__serde_derive_internals-0.29.1",
         sha256 = "18d26a20a969b9e3fdf2fc2d9f21eda6c40e2de84c9408bb5d3b05d499aae711",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/serde_derive_internals/0.29.1/download"],
@@ -1881,7 +1881,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__serde_json-1.0.149",
+        name = "rules_rust_mutants_deps__serde_json-1.0.149",
         sha256 = "83fc039473c5595ace860d8c4fafa220ff474b3fc6bfdb4293327f1a37e94d86",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/serde_json/1.0.149/download"],
@@ -1891,7 +1891,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__serde_spanned-0.6.9",
+        name = "rules_rust_mutants_deps__serde_spanned-0.6.9",
         sha256 = "bf41e0cfaf7226dca15e8197172c295a782857fcb97fad1808a166870dee75a3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/serde_spanned/0.6.9/download"],
@@ -1901,7 +1901,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__sharded-slab-0.1.7",
+        name = "rules_rust_mutants_deps__sharded-slab-0.1.7",
         sha256 = "f40ca3c46823713e0d4209592e8d6e826aa57e928f09752619fc696c499637f6",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/sharded-slab/0.1.7/download"],
@@ -1911,7 +1911,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__similar-2.7.0",
+        name = "rules_rust_mutants_deps__similar-2.7.0",
         sha256 = "bbbb5d9659141646ae647b42fe094daf6c6192d1620870b449d9557f748b2daa",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/similar/2.7.0/download"],
@@ -1921,7 +1921,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__smallvec-1.15.1",
+        name = "rules_rust_mutants_deps__smallvec-1.15.1",
         sha256 = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/smallvec/1.15.1/download"],
@@ -1931,7 +1931,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__smol_str-0.3.5",
+        name = "rules_rust_mutants_deps__smol_str-0.3.5",
         sha256 = "0f7a918bd2a9951d18ee6e48f076843e8e73a9a5d22cf05bcd4b7a81bdd04e17",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/smol_str/0.3.5/download"],
@@ -1941,7 +1941,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__strsim-0.11.1",
+        name = "rules_rust_mutants_deps__strsim-0.11.1",
         sha256 = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/strsim/0.11.1/download"],
@@ -1951,7 +1951,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__strum-0.26.3",
+        name = "rules_rust_mutants_deps__strum-0.26.3",
         sha256 = "8fec0f0aef304996cf250b31b5a10dee7980c85da9d759361292b8bca5a18f06",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/strum/0.26.3/download"],
@@ -1961,7 +1961,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__strum_macros-0.26.4",
+        name = "rules_rust_mutants_deps__strum_macros-0.26.4",
         sha256 = "4c6bee85a5a24955dc440386795aa378cd9cf82acd5f764469152d2270e581be",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/strum_macros/0.26.4/download"],
@@ -1971,7 +1971,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__syn-2.0.117",
+        name = "rules_rust_mutants_deps__syn-2.0.117",
         sha256 = "e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/syn/2.0.117/download"],
@@ -1981,7 +1981,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__target-lexicon-0.13.3",
+        name = "rules_rust_mutants_deps__target-lexicon-0.13.3",
         sha256 = "df7f62577c25e07834649fc3b39fafdc597c0a3527dc1c60129201ccfcbaa50c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/target-lexicon/0.13.3/download"],
@@ -1991,7 +1991,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__target-spec-3.5.7",
+        name = "rules_rust_mutants_deps__target-spec-3.5.7",
         sha256 = "585c173ce474b6257cfb2a107949e48eb1ab9cae21cecbdf13401ae3be4a411a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/target-spec/3.5.7/download"],
@@ -2001,7 +2001,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__tempfile-3.26.0",
+        name = "rules_rust_mutants_deps__tempfile-3.26.0",
         sha256 = "82a72c767771b47409d2345987fda8628641887d5466101319899796367354a0",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/tempfile/3.26.0/download"],
@@ -2011,7 +2011,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__terminal_size-0.2.6",
+        name = "rules_rust_mutants_deps__terminal_size-0.2.6",
         sha256 = "8e6bf6f19e9f8ed8d4048dc22981458ebcf406d67e94cd422e5ecd73d63b3237",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/terminal_size/0.2.6/download"],
@@ -2021,7 +2021,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__terminal_size-0.4.3",
+        name = "rules_rust_mutants_deps__terminal_size-0.4.3",
         sha256 = "60b8cb979cb11c32ce1603f8137b22262a9d131aaa5c37b5678025f22b8becd0",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/terminal_size/0.4.3/download"],
@@ -2031,7 +2031,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__termtree-0.5.1",
+        name = "rules_rust_mutants_deps__termtree-0.5.1",
         sha256 = "8f50febec83f5ee1df3015341d8bd429f2d1cc62bcba7ea2076759d315084683",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/termtree/0.5.1/download"],
@@ -2041,7 +2041,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__test-log-0.2.19",
+        name = "rules_rust_mutants_deps__test-log-0.2.19",
         sha256 = "37d53ac171c92a39e4769491c4b4dde7022c60042254b5fc044ae409d34a24d4",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/test-log/0.2.19/download"],
@@ -2051,7 +2051,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__test-log-macros-0.2.19",
+        name = "rules_rust_mutants_deps__test-log-macros-0.2.19",
         sha256 = "be35209fd0781c5401458ab66e4f98accf63553e8fae7425503e92fdd319783b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/test-log-macros/0.2.19/download"],
@@ -2061,7 +2061,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__thiserror-2.0.18",
+        name = "rules_rust_mutants_deps__thiserror-2.0.18",
         sha256 = "4288b5bcbc7920c07a1149a35cf9590a2aa808e0bc1eafaade0b80947865fbc4",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/thiserror/2.0.18/download"],
@@ -2071,7 +2071,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__thiserror-impl-2.0.18",
+        name = "rules_rust_mutants_deps__thiserror-impl-2.0.18",
         sha256 = "ebc4ee7f67670e9b64d05fa4253e753e016c6c95ff35b89b7941d6b856dec1d5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/thiserror-impl/2.0.18/download"],
@@ -2081,7 +2081,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__thread_local-1.1.9",
+        name = "rules_rust_mutants_deps__thread_local-1.1.9",
         sha256 = "f60246a4944f24f6e018aa17cdeffb7818b76356965d03b07d6a9886e8962185",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/thread_local/1.1.9/download"],
@@ -2091,7 +2091,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__toml-0.8.23",
+        name = "rules_rust_mutants_deps__toml-0.8.23",
         sha256 = "dc1beb996b9d83529a9e75c17a1686767d148d70663143c7854d8b4a09ced362",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/toml/0.8.23/download"],
@@ -2101,7 +2101,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__toml_datetime-0.6.11",
+        name = "rules_rust_mutants_deps__toml_datetime-0.6.11",
         sha256 = "22cddaf88f4fbc13c51aebbf5f8eceb5c7c5a9da2ac40a13519eb5b0a0e8f11c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/toml_datetime/0.6.11/download"],
@@ -2111,7 +2111,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__toml_edit-0.22.27",
+        name = "rules_rust_mutants_deps__toml_edit-0.22.27",
         sha256 = "41fe8c660ae4257887cf66394862d21dbca4a6ddd26f04a3560410406a2f819a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/toml_edit/0.22.27/download"],
@@ -2121,7 +2121,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__toml_write-0.1.2",
+        name = "rules_rust_mutants_deps__toml_write-0.1.2",
         sha256 = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/toml_write/0.1.2/download"],
@@ -2131,7 +2131,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__tracing-0.1.44",
+        name = "rules_rust_mutants_deps__tracing-0.1.44",
         sha256 = "63e71662fa4b2a2c3a26f570f037eb95bb1f85397f3cd8076caed2f026a6d100",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/tracing/0.1.44/download"],
@@ -2141,7 +2141,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__tracing-attributes-0.1.31",
+        name = "rules_rust_mutants_deps__tracing-attributes-0.1.31",
         sha256 = "7490cfa5ec963746568740651ac6781f701c9c5ea257c58e057f3ba8cf69e8da",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/tracing-attributes/0.1.31/download"],
@@ -2151,7 +2151,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__tracing-core-0.1.36",
+        name = "rules_rust_mutants_deps__tracing-core-0.1.36",
         sha256 = "db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/tracing-core/0.1.36/download"],
@@ -2161,7 +2161,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__tracing-log-0.2.0",
+        name = "rules_rust_mutants_deps__tracing-log-0.2.0",
         sha256 = "ee855f1f400bd0e5c02d150ae5de3840039a3f54b025156404e34c23c03f47c3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/tracing-log/0.2.0/download"],
@@ -2171,7 +2171,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__tracing-subscriber-0.3.22",
+        name = "rules_rust_mutants_deps__tracing-subscriber-0.3.22",
         sha256 = "2f30143827ddab0d256fd843b7a66d164e9f271cfa0dde49142c5ca0ca291f1e",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/tracing-subscriber/0.3.22/download"],
@@ -2181,7 +2181,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__unicode-ident-1.0.24",
+        name = "rules_rust_mutants_deps__unicode-ident-1.0.24",
         sha256 = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/unicode-ident/1.0.24/download"],
@@ -2191,7 +2191,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__unicode-width-0.2.2",
+        name = "rules_rust_mutants_deps__unicode-width-0.2.2",
         sha256 = "b4ac048d71ede7ee76d585517add45da530660ef4390e49b098733c6e897f254",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/unicode-width/0.2.2/download"],
@@ -2201,7 +2201,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__unicode-xid-0.2.6",
+        name = "rules_rust_mutants_deps__unicode-xid-0.2.6",
         sha256 = "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/unicode-xid/0.2.6/download"],
@@ -2211,7 +2211,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__utf8parse-0.2.2",
+        name = "rules_rust_mutants_deps__utf8parse-0.2.2",
         sha256 = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/utf8parse/0.2.2/download"],
@@ -2221,7 +2221,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__valuable-0.1.1",
+        name = "rules_rust_mutants_deps__valuable-0.1.1",
         sha256 = "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/valuable/0.1.1/download"],
@@ -2231,7 +2231,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wait-timeout-0.2.1",
+        name = "rules_rust_mutants_deps__wait-timeout-0.2.1",
         sha256 = "09ac3b126d3914f9849036f826e054cbabdc8519970b8998ddaf3b5bd3c65f11",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wait-timeout/0.2.1/download"],
@@ -2241,7 +2241,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__walkdir-2.5.0",
+        name = "rules_rust_mutants_deps__walkdir-2.5.0",
         sha256 = "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/walkdir/2.5.0/download"],
@@ -2251,7 +2251,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasip2-1.0.2-wasi-0.2.9",
+        name = "rules_rust_mutants_deps__wasip2-1.0.2-wasi-0.2.9",
         sha256 = "9517f9239f02c069db75e65f174b3da828fe5f5b945c4dd26bd25d89c03ebcf5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasip2/1.0.2+wasi-0.2.9/download"],
@@ -2261,7 +2261,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasip3-0.4.0-wasi-0.3.0-rc-2026-01-06",
+        name = "rules_rust_mutants_deps__wasip3-0.4.0-wasi-0.3.0-rc-2026-01-06",
         sha256 = "5428f8bf88ea5ddc08faddef2ac4a67e390b88186c703ce6dbd955e1c145aca5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasip3/0.4.0+wasi-0.3.0-rc-2026-01-06/download"],
@@ -2271,7 +2271,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasite-0.1.0",
+        name = "rules_rust_mutants_deps__wasite-0.1.0",
         sha256 = "b8dad83b4f25e74f184f64c43b150b91efe7647395b42289f38e50566d82855b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasite/0.1.0/download"],
@@ -2281,7 +2281,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasm-bindgen-0.2.114",
+        name = "rules_rust_mutants_deps__wasm-bindgen-0.2.114",
         sha256 = "6532f9a5c1ece3798cb1c2cfdba640b9b3ba884f5db45973a6f442510a87d38e",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasm-bindgen/0.2.114/download"],
@@ -2291,7 +2291,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasm-bindgen-macro-0.2.114",
+        name = "rules_rust_mutants_deps__wasm-bindgen-macro-0.2.114",
         sha256 = "18a2d50fcf105fb33bb15f00e7a77b772945a2ee45dcf454961fd843e74c18e6",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasm-bindgen-macro/0.2.114/download"],
@@ -2301,7 +2301,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasm-bindgen-macro-support-0.2.114",
+        name = "rules_rust_mutants_deps__wasm-bindgen-macro-support-0.2.114",
         sha256 = "03ce4caeaac547cdf713d280eda22a730824dd11e6b8c3ca9e42247b25c631e3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasm-bindgen-macro-support/0.2.114/download"],
@@ -2311,7 +2311,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasm-bindgen-shared-0.2.114",
+        name = "rules_rust_mutants_deps__wasm-bindgen-shared-0.2.114",
         sha256 = "75a326b8c223ee17883a4251907455a2431acc2791c98c26279376490c378c16",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasm-bindgen-shared/0.2.114/download"],
@@ -2321,7 +2321,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasm-encoder-0.244.0",
+        name = "rules_rust_mutants_deps__wasm-encoder-0.244.0",
         sha256 = "990065f2fe63003fe337b932cfb5e3b80e0b4d0f5ff650e6985b1048f62c8319",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasm-encoder/0.244.0/download"],
@@ -2331,7 +2331,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasm-metadata-0.244.0",
+        name = "rules_rust_mutants_deps__wasm-metadata-0.244.0",
         sha256 = "bb0e353e6a2fbdc176932bbaab493762eb1255a7900fe0fea1a2f96c296cc909",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasm-metadata/0.244.0/download"],
@@ -2341,7 +2341,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wasmparser-0.244.0",
+        name = "rules_rust_mutants_deps__wasmparser-0.244.0",
         sha256 = "47b807c72e1bac69382b3a6fb3dbe8ea4c0ed87ff5629b8685ae6b9a611028fe",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wasmparser/0.244.0/download"],
@@ -2351,7 +2351,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__web-sys-0.3.91",
+        name = "rules_rust_mutants_deps__web-sys-0.3.91",
         sha256 = "854ba17bb104abfb26ba36da9729addc7ce7f06f5c0f90f3c391f8461cca21f9",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/web-sys/0.3.91/download"],
@@ -2361,7 +2361,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__whoami-1.6.1",
+        name = "rules_rust_mutants_deps__whoami-1.6.1",
         sha256 = "5d4a4db5077702ca3015d3d02d74974948aba2ad9e12ab7df718ee64ccd7e97d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/whoami/1.6.1/download"],
@@ -2371,7 +2371,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__winapi-0.3.9",
+        name = "rules_rust_mutants_deps__winapi-0.3.9",
         sha256 = "5c839a674fcd7a98952e593242ea400abe93992746761e38641405d28b00f419",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/winapi/0.3.9/download"],
@@ -2381,7 +2381,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__winapi-i686-pc-windows-gnu-0.4.0",
+        name = "rules_rust_mutants_deps__winapi-i686-pc-windows-gnu-0.4.0",
         sha256 = "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/winapi-i686-pc-windows-gnu/0.4.0/download"],
@@ -2391,7 +2391,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__winapi-util-0.1.11",
+        name = "rules_rust_mutants_deps__winapi-util-0.1.11",
         sha256 = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/winapi-util/0.1.11/download"],
@@ -2401,7 +2401,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__winapi-x86_64-pc-windows-gnu-0.4.0",
+        name = "rules_rust_mutants_deps__winapi-x86_64-pc-windows-gnu-0.4.0",
         sha256 = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/winapi-x86_64-pc-windows-gnu/0.4.0/download"],
@@ -2411,7 +2411,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-link-0.2.1",
+        name = "rules_rust_mutants_deps__windows-link-0.2.1",
         sha256 = "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-link/0.2.1/download"],
@@ -2421,7 +2421,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-sys-0.48.0",
+        name = "rules_rust_mutants_deps__windows-sys-0.48.0",
         sha256 = "677d2418bec65e3338edb076e806bc1ec15693c5d0104683f2efe857f61056a9",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-sys/0.48.0/download"],
@@ -2431,7 +2431,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-sys-0.59.0",
+        name = "rules_rust_mutants_deps__windows-sys-0.59.0",
         sha256 = "1e38bc4d79ed67fd075bcc251a1c39b32a1776bbe92e5bef1f0bf1f8c531853b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-sys/0.59.0/download"],
@@ -2441,7 +2441,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-sys-0.60.2",
+        name = "rules_rust_mutants_deps__windows-sys-0.60.2",
         sha256 = "f2f500e4d28234f72040990ec9d39e3a6b950f9f22d3dba18416c35882612bcb",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-sys/0.60.2/download"],
@@ -2451,7 +2451,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-sys-0.61.2",
+        name = "rules_rust_mutants_deps__windows-sys-0.61.2",
         sha256 = "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-sys/0.61.2/download"],
@@ -2461,7 +2461,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-targets-0.48.5",
+        name = "rules_rust_mutants_deps__windows-targets-0.48.5",
         sha256 = "9a2fa6e2155d7247be68c096456083145c183cbbbc2764150dda45a87197940c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-targets/0.48.5/download"],
@@ -2471,7 +2471,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-targets-0.52.6",
+        name = "rules_rust_mutants_deps__windows-targets-0.52.6",
         sha256 = "9b724f72796e036ab90c1021d4780d4d3d648aca59e491e6b98e725b84e99973",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-targets/0.52.6/download"],
@@ -2481,7 +2481,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows-targets-0.53.5",
+        name = "rules_rust_mutants_deps__windows-targets-0.53.5",
         sha256 = "4945f9f551b88e0d65f3db0bc25c33b8acea4d9e41163edf90dcd0b19f9069f3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows-targets/0.53.5/download"],
@@ -2491,7 +2491,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_aarch64_gnullvm-0.48.5",
+        name = "rules_rust_mutants_deps__windows_aarch64_gnullvm-0.48.5",
         sha256 = "2b38e32f0abccf9987a4e3079dfb67dcd799fb61361e53e2882c3cbaf0d905d8",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_aarch64_gnullvm/0.48.5/download"],
@@ -2501,7 +2501,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_aarch64_gnullvm-0.52.6",
+        name = "rules_rust_mutants_deps__windows_aarch64_gnullvm-0.52.6",
         sha256 = "32a4622180e7a0ec044bb555404c800bc9fd9ec262ec147edd5989ccd0c02cd3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_aarch64_gnullvm/0.52.6/download"],
@@ -2511,7 +2511,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_aarch64_gnullvm-0.53.1",
+        name = "rules_rust_mutants_deps__windows_aarch64_gnullvm-0.53.1",
         sha256 = "a9d8416fa8b42f5c947f8482c43e7d89e73a173cead56d044f6a56104a6d1b53",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_aarch64_gnullvm/0.53.1/download"],
@@ -2521,7 +2521,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_aarch64_msvc-0.48.5",
+        name = "rules_rust_mutants_deps__windows_aarch64_msvc-0.48.5",
         sha256 = "dc35310971f3b2dbbf3f0690a219f40e2d9afcf64f9ab7cc1be722937c26b4bc",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_aarch64_msvc/0.48.5/download"],
@@ -2531,7 +2531,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_aarch64_msvc-0.52.6",
+        name = "rules_rust_mutants_deps__windows_aarch64_msvc-0.52.6",
         sha256 = "09ec2a7bb152e2252b53fa7803150007879548bc709c039df7627cabbd05d469",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_aarch64_msvc/0.52.6/download"],
@@ -2541,7 +2541,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_aarch64_msvc-0.53.1",
+        name = "rules_rust_mutants_deps__windows_aarch64_msvc-0.53.1",
         sha256 = "b9d782e804c2f632e395708e99a94275910eb9100b2114651e04744e9b125006",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_aarch64_msvc/0.53.1/download"],
@@ -2551,7 +2551,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_gnu-0.48.5",
+        name = "rules_rust_mutants_deps__windows_i686_gnu-0.48.5",
         sha256 = "a75915e7def60c94dcef72200b9a8e58e5091744960da64ec734a6c6e9b3743e",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_gnu/0.48.5/download"],
@@ -2561,7 +2561,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_gnu-0.52.6",
+        name = "rules_rust_mutants_deps__windows_i686_gnu-0.52.6",
         sha256 = "8e9b5ad5ab802e97eb8e295ac6720e509ee4c243f69d781394014ebfe8bbfa0b",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_gnu/0.52.6/download"],
@@ -2571,7 +2571,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_gnu-0.53.1",
+        name = "rules_rust_mutants_deps__windows_i686_gnu-0.53.1",
         sha256 = "960e6da069d81e09becb0ca57a65220ddff016ff2d6af6a223cf372a506593a3",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_gnu/0.53.1/download"],
@@ -2581,7 +2581,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_gnullvm-0.52.6",
+        name = "rules_rust_mutants_deps__windows_i686_gnullvm-0.52.6",
         sha256 = "0eee52d38c090b3caa76c563b86c3a4bd71ef1a819287c19d586d7334ae8ed66",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_gnullvm/0.52.6/download"],
@@ -2591,7 +2591,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_gnullvm-0.53.1",
+        name = "rules_rust_mutants_deps__windows_i686_gnullvm-0.53.1",
         sha256 = "fa7359d10048f68ab8b09fa71c3daccfb0e9b559aed648a8f95469c27057180c",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_gnullvm/0.53.1/download"],
@@ -2601,7 +2601,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_msvc-0.48.5",
+        name = "rules_rust_mutants_deps__windows_i686_msvc-0.48.5",
         sha256 = "8f55c233f70c4b27f66c523580f78f1004e8b5a8b659e05a4eb49d4166cca406",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_msvc/0.48.5/download"],
@@ -2611,7 +2611,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_msvc-0.52.6",
+        name = "rules_rust_mutants_deps__windows_i686_msvc-0.52.6",
         sha256 = "240948bc05c5e7c6dabba28bf89d89ffce3e303022809e73deaefe4f6ec56c66",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_msvc/0.52.6/download"],
@@ -2621,7 +2621,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_i686_msvc-0.53.1",
+        name = "rules_rust_mutants_deps__windows_i686_msvc-0.53.1",
         sha256 = "1e7ac75179f18232fe9c285163565a57ef8d3c89254a30685b57d83a38d326c2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_i686_msvc/0.53.1/download"],
@@ -2631,7 +2631,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_gnu-0.48.5",
+        name = "rules_rust_mutants_deps__windows_x86_64_gnu-0.48.5",
         sha256 = "53d40abd2583d23e4718fddf1ebec84dbff8381c07cae67ff7768bbf19c6718e",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_gnu/0.48.5/download"],
@@ -2641,7 +2641,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_gnu-0.52.6",
+        name = "rules_rust_mutants_deps__windows_x86_64_gnu-0.52.6",
         sha256 = "147a5c80aabfbf0c7d901cb5895d1de30ef2907eb21fbbab29ca94c5b08b1a78",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_gnu/0.52.6/download"],
@@ -2651,7 +2651,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_gnu-0.53.1",
+        name = "rules_rust_mutants_deps__windows_x86_64_gnu-0.53.1",
         sha256 = "9c3842cdd74a865a8066ab39c8a7a473c0778a3f29370b5fd6b4b9aa7df4a499",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_gnu/0.53.1/download"],
@@ -2661,7 +2661,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_gnullvm-0.48.5",
+        name = "rules_rust_mutants_deps__windows_x86_64_gnullvm-0.48.5",
         sha256 = "0b7b52767868a23d5bab768e390dc5f5c55825b6d30b86c844ff2dc7414044cc",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_gnullvm/0.48.5/download"],
@@ -2671,7 +2671,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_gnullvm-0.52.6",
+        name = "rules_rust_mutants_deps__windows_x86_64_gnullvm-0.52.6",
         sha256 = "24d5b23dc417412679681396f2b49f3de8c1473deb516bd34410872eff51ed0d",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_gnullvm/0.52.6/download"],
@@ -2681,7 +2681,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_gnullvm-0.53.1",
+        name = "rules_rust_mutants_deps__windows_x86_64_gnullvm-0.53.1",
         sha256 = "0ffa179e2d07eee8ad8f57493436566c7cc30ac536a3379fdf008f47f6bb7ae1",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_gnullvm/0.53.1/download"],
@@ -2691,7 +2691,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_msvc-0.48.5",
+        name = "rules_rust_mutants_deps__windows_x86_64_msvc-0.48.5",
         sha256 = "ed94fce61571a4006852b7389a063ab983c02eb1bb37b47f8272ce92d06d9538",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_msvc/0.48.5/download"],
@@ -2701,7 +2701,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_msvc-0.52.6",
+        name = "rules_rust_mutants_deps__windows_x86_64_msvc-0.52.6",
         sha256 = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_msvc/0.52.6/download"],
@@ -2711,7 +2711,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__windows_x86_64_msvc-0.53.1",
+        name = "rules_rust_mutants_deps__windows_x86_64_msvc-0.53.1",
         sha256 = "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/windows_x86_64_msvc/0.53.1/download"],
@@ -2721,7 +2721,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__winnow-0.7.14",
+        name = "rules_rust_mutants_deps__winnow-0.7.14",
         sha256 = "5a5364e9d77fcdeeaa6062ced926ee3381faa2ee02d3eb83a5c27a8825540829",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/winnow/0.7.14/download"],
@@ -2731,7 +2731,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wit-bindgen-0.51.0",
+        name = "rules_rust_mutants_deps__wit-bindgen-0.51.0",
         sha256 = "d7249219f66ced02969388cf2bb044a09756a083d0fab1e566056b04d9fbcaa5",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wit-bindgen/0.51.0/download"],
@@ -2741,7 +2741,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wit-bindgen-core-0.51.0",
+        name = "rules_rust_mutants_deps__wit-bindgen-core-0.51.0",
         sha256 = "ea61de684c3ea68cb082b7a88508a8b27fcc8b797d738bfc99a82facf1d752dc",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wit-bindgen-core/0.51.0/download"],
@@ -2751,7 +2751,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wit-bindgen-rust-0.51.0",
+        name = "rules_rust_mutants_deps__wit-bindgen-rust-0.51.0",
         sha256 = "b7c566e0f4b284dd6561c786d9cb0142da491f46a9fbed79ea69cdad5db17f21",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wit-bindgen-rust/0.51.0/download"],
@@ -2761,7 +2761,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wit-bindgen-rust-macro-0.51.0",
+        name = "rules_rust_mutants_deps__wit-bindgen-rust-macro-0.51.0",
         sha256 = "0c0f9bfd77e6a48eccf51359e3ae77140a7f50b1e2ebfe62422d8afdaffab17a",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wit-bindgen-rust-macro/0.51.0/download"],
@@ -2771,7 +2771,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wit-component-0.244.0",
+        name = "rules_rust_mutants_deps__wit-component-0.244.0",
         sha256 = "9d66ea20e9553b30172b5e831994e35fbde2d165325bec84fc43dbf6f4eb9cb2",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wit-component/0.244.0/download"],
@@ -2781,7 +2781,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__wit-parser-0.244.0",
+        name = "rules_rust_mutants_deps__wit-parser-0.244.0",
         sha256 = "ecc8ac4bc1dc3381b7f59c34f00b67e18f910c2c0f50015669dde7def656a736",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/wit-parser/0.244.0/download"],
@@ -2791,7 +2791,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__yansi-0.5.1",
+        name = "rules_rust_mutants_deps__yansi-0.5.1",
         sha256 = "09041cd90cf85f7f8b2df60c646f853b7f535ce68f85244eb6731cf89fa498ec",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/yansi/0.5.1/download"],
@@ -2801,7 +2801,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__yansi-1.0.1",
+        name = "rules_rust_mutants_deps__yansi-1.0.1",
         sha256 = "cfe53a6657fd280eaa890a3bc59152892ffa3e30101319d168b781ed6529b049",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/yansi/1.0.1/download"],
@@ -2811,7 +2811,7 @@ def crate_repositories():
 
     maybe(
         http_archive,
-        name = "rules_rust_mutation_deps__zmij-1.0.21",
+        name = "rules_rust_mutants_deps__zmij-1.0.21",
         sha256 = "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa",
         type = "tar.gz",
         urls = ["https://static.crates.io/crates/zmij/1.0.21/download"],
@@ -2820,52 +2820,52 @@ def crate_repositories():
     )
 
     return [
-        struct(repo = "rules_rust_mutation_deps__anyhow-1.0.102", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__camino-1.2.2", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__cargo_metadata-0.23.1", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__clap-4.5.60", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__clap_complete-4.5.66", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__color-print-0.3.7", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__console-0.15.11", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__ctrlc-3.5.2", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__fastrand-2.3.0", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__flickzeug-0.4.5", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__fs2-0.4.3", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__globset-0.4.18", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__ignore-0.4.25", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__indoc-2.0.7", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__itertools-0.13.0", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__jiff-0.1.29", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__jobserver-0.1.34", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__mutants-0.0.3", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__nextest-metadata-0.12.3", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__nix-0.30.1", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__num_cpus-1.17.0", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__nutmeg-0.1.5", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__path-slash-0.2.1", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__proc-macro2-1.0.106", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__quote-1.0.44", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__reflink-0.1.3", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__regex-1.12.3", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__schemars-0.9.0", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__serde-1.0.228", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__serde_json-1.0.149", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__similar-2.7.0", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__strum-0.26.3", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__syn-2.0.117", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__tempfile-3.26.0", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__test-log-0.2.19", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__toml-0.8.23", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__tracing-0.1.44", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__tracing-subscriber-0.3.22", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__whoami-1.6.1", is_dev_dep = False),
-        struct(repo = "rules_rust_mutation_deps__assert_cmd-2.1.2", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__assert_matches-1.5.0", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__cp_r-0.5.2", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__insta-1.46.3", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__lazy_static-1.5.0", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__predicates-3.1.4", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__pretty_assertions-1.4.1", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__rusty-fork-0.3.1", is_dev_dep = True),
-        struct(repo = "rules_rust_mutation_deps__walkdir-2.5.0", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__anyhow-1.0.102", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__camino-1.2.2", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__cargo_metadata-0.23.1", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__clap-4.5.60", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__clap_complete-4.5.66", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__color-print-0.3.7", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__console-0.15.11", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__ctrlc-3.5.2", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__fastrand-2.3.0", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__flickzeug-0.4.5", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__fs2-0.4.3", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__globset-0.4.18", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__ignore-0.4.25", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__indoc-2.0.7", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__itertools-0.13.0", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__jiff-0.1.29", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__jobserver-0.1.34", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__mutants-0.0.3", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__nextest-metadata-0.12.3", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__nix-0.30.1", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__num_cpus-1.17.0", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__nutmeg-0.1.5", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__path-slash-0.2.1", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__proc-macro2-1.0.106", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__quote-1.0.44", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__reflink-0.1.3", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__regex-1.12.3", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__schemars-0.9.0", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__serde-1.0.228", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__serde_json-1.0.149", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__similar-2.7.0", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__strum-0.26.3", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__syn-2.0.117", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__tempfile-3.26.0", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__test-log-0.2.19", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__toml-0.8.23", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__tracing-0.1.44", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__tracing-subscriber-0.3.22", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__whoami-1.6.1", is_dev_dep = False),
+        struct(repo = "rules_rust_mutants_deps__assert_cmd-2.1.2", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__assert_matches-1.5.0", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__cp_r-0.5.2", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__insta-1.46.3", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__lazy_static-1.5.0", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__predicates-3.1.4", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__pretty_assertions-1.4.1", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__rusty-fork-0.3.1", is_dev_dep = True),
+        struct(repo = "rules_rust_mutants_deps__walkdir-2.5.0", is_dev_dep = True),
     ]

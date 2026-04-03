@@ -103,8 +103,8 @@ rust_library(
     }),
     version = "0.6.4",
     deps = [
-        "@rules_rust_mutation_deps__objc2-0.6.4//:build_script_build",
-        "@rules_rust_mutation_deps__objc2-encode-4.1.0//:objc2_encode",
+        "@rules_rust_mutants_deps__objc2-0.6.4//:build_script_build",
+        "@rules_rust_mutants_deps__objc2-encode-4.1.0//:objc2_encode",
     ],
 )
 

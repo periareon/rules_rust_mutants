@@ -95,22 +95,22 @@ rust_library(
     }),
     version = "0.4.25",
     deps = [
-        "@rules_rust_mutation_deps__crossbeam-deque-0.8.6//:crossbeam_deque",
-        "@rules_rust_mutation_deps__globset-0.4.18//:globset",
-        "@rules_rust_mutation_deps__log-0.4.29//:log",
-        "@rules_rust_mutation_deps__memchr-2.8.0//:memchr",
-        "@rules_rust_mutation_deps__regex-automata-0.4.14//:regex_automata",
-        "@rules_rust_mutation_deps__same-file-1.0.6//:same_file",
-        "@rules_rust_mutation_deps__walkdir-2.5.0//:walkdir",
+        "@rules_rust_mutants_deps__crossbeam-deque-0.8.6//:crossbeam_deque",
+        "@rules_rust_mutants_deps__globset-0.4.18//:globset",
+        "@rules_rust_mutants_deps__log-0.4.29//:log",
+        "@rules_rust_mutants_deps__memchr-2.8.0//:memchr",
+        "@rules_rust_mutants_deps__regex-automata-0.4.14//:regex_automata",
+        "@rules_rust_mutants_deps__same-file-1.0.6//:same_file",
+        "@rules_rust_mutants_deps__walkdir-2.5.0//:walkdir",
     ] + select({
         "@rules_rust//rust/platform:aarch64-pc-windows-msvc": [
-            "@rules_rust_mutation_deps__winapi-util-0.1.11//:winapi_util",  # cfg(windows)
+            "@rules_rust_mutants_deps__winapi-util-0.1.11//:winapi_util",  # cfg(windows)
         ],
         "@rules_rust//rust/platform:i686-pc-windows-msvc": [
-            "@rules_rust_mutation_deps__winapi-util-0.1.11//:winapi_util",  # cfg(windows)
+            "@rules_rust_mutants_deps__winapi-util-0.1.11//:winapi_util",  # cfg(windows)
         ],
         "@rules_rust//rust/platform:x86_64-pc-windows-msvc": [
-            "@rules_rust_mutation_deps__winapi-util-0.1.11//:winapi_util",  # cfg(windows)
+            "@rules_rust_mutants_deps__winapi-util-0.1.11//:winapi_util",  # cfg(windows)
         ],
         "//conditions:default": [],
     }),
