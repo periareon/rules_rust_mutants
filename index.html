@@ -188,16 +188,16 @@ prints <code>No mutations generated.</code>.</li>
 </ul>
 <h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
 <h3 id="bzlmod"><a class="header" href="#bzlmod">Bzlmod</a></h3>
-<pre><code class="language-python">bazel_dep(name = "rules_rust_mutation", version = "{SEE_RELEASE_NOTES}")
+<pre><code class="language-python">bazel_dep(name = "rules_rust_mutants", version = "{SEE_RELEASE_NOTES}")
 </code></pre>
 <h3 id="workspace"><a class="header" href="#workspace">WORKSPACE</a></h3>
-<pre><code class="language-python">load("@rules_rust_mutation//:repositories.bzl", "rust_mutation_dependencies")
+<pre><code class="language-python">load("@rules_rust_mutants//:repositories.bzl", "rust_mutation_dependencies")
 
 rust_mutation_dependencies()
 </code></pre>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
 <pre><code class="language-python">load("@rules_rust//rust:defs.bzl", "rust_library")
-load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 
 rust_library(
     name = "my_lib",

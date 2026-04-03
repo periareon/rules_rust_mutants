@@ -156,7 +156,7 @@
                 <div id="content" class="content">
                     <main>
                         <!-- Generated with Stardoc: http://skydoc.bazel.build -->
-<h1 id="rules_rust_mutation"><a class="header" href="#rules_rust_mutation">rules_rust_mutation</a></h1>
+<h1 id="rules_rust_mutants"><a class="header" href="#rules_rust_mutants">rules_rust_mutants</a></h1>
 <p>Mutation testing for Rust crates built with rules_rust.</p>
 <p><code>rust_mutation_test</code> enumerates source-level mutations for a <code>rust_library</code>,
 compiles each mutant with the same rustc configuration as <code>rust_test</code>, and
@@ -168,16 +168,16 @@ runs the crate's inline <code>#[cfg(test)]</code> tests against each mutant.</p>
 <h2 id="setup"><a class="header" href="#setup">Setup</a></h2>
 <h3 id="bzlmod"><a class="header" href="#bzlmod">Bzlmod</a></h3>
 <p>Add the following to your <code>MODULE.bazel</code> file:</p>
-<pre><code class="language-python">bazel_dep(name = "rules_rust_mutation", version = "{SEE_RELEASE_NOTES}")
+<pre><code class="language-python">bazel_dep(name = "rules_rust_mutants", version = "{SEE_RELEASE_NOTES}")
 </code></pre>
 <h3 id="workspace"><a class="header" href="#workspace">WORKSPACE</a></h3>
 <p>If you're using <code>WORKSPACE</code>, load repositories with:</p>
-<pre><code class="language-python">load("@rules_rust_mutation//:repositories.bzl", "rust_mutation_dependencies")
+<pre><code class="language-python">load("@rules_rust_mutants//:repositories.bzl", "rust_mutation_dependencies")
 
 rust_mutation_dependencies()
 </code></pre>
 <h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
-<pre><code class="language-python">load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+<pre><code class="language-python">load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 load("@rules_rust//rust:defs.bzl", "rust_library")
 
 rust_library(
@@ -222,7 +222,7 @@ internals.</li>
 <p><a id="rust_mutation_test"></a></p>
 <h2 id="rust_mutation_test"><a class="header" href="#rust_mutation_test">rust_mutation_test</a></h2>
 <pre>
-load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 
 rust_mutation_test(<a href="#rust_mutation_test-name">name</a>, <a href="#rust_mutation_test-allow_survivors">allow_survivors</a>, <a href="#rust_mutation_test-crate">crate</a>, <a href="#rust_mutation_test-mutants_config">mutants_config</a>)
 </pre>
@@ -243,7 +243,7 @@ mutants.</li>
 <li>Uses <code>cargo mutants --list --json --diff --Zmutate-file ...</code>.</li>
 </ul>
 <p>Example:</p>
-<pre><code class="language-python">load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+<pre><code class="language-python">load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 
 rust_library(
     name = "my_lib",
