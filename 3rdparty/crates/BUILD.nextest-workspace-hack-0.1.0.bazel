@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "0.1.0",
     deps = [
-        "@rules_rust_mutation_deps__nextest-workspace-hack-0.1.0//:build_script_build",
+        "@rules_rust_mutants_deps__nextest-workspace-hack-0.1.0//:build_script_build",
     ],
 )
 

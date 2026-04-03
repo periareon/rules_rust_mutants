@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "1.0.21",
     deps = [
-        "@rules_rust_mutation_deps__zmij-1.0.21//:build_script_build",
+        "@rules_rust_mutants_deps__zmij-1.0.21//:build_script_build",
     ],
 )
 

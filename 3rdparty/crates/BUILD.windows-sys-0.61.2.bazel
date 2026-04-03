@@ -107,6 +107,6 @@ rust_library(
     }),
     version = "0.61.2",
     deps = [
-        "@rules_rust_mutation_deps__windows-link-0.2.1//:windows_link",
+        "@rules_rust_mutants_deps__windows-link-0.2.1//:windows_link",
     ],
 )

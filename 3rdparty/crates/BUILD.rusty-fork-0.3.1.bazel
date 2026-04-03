@@ -100,9 +100,9 @@ rust_library(
     }),
     version = "0.3.1",
     deps = [
-        "@rules_rust_mutation_deps__fnv-1.0.7//:fnv",
-        "@rules_rust_mutation_deps__quick-error-1.2.3//:quick_error",
-        "@rules_rust_mutation_deps__tempfile-3.26.0//:tempfile",
-        "@rules_rust_mutation_deps__wait-timeout-0.2.1//:wait_timeout",
+        "@rules_rust_mutants_deps__fnv-1.0.7//:fnv",
+        "@rules_rust_mutants_deps__quick-error-1.2.3//:quick_error",
+        "@rules_rust_mutants_deps__tempfile-3.26.0//:tempfile",
+        "@rules_rust_mutants_deps__wait-timeout-0.2.1//:wait_timeout",
     ],
 )

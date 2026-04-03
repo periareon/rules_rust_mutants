@@ -219,7 +219,7 @@ rust_library(
     }),
     version = "0.2.182",
     deps = [
-        "@rules_rust_mutation_deps__libc-0.2.182//:build_script_build",
+        "@rules_rust_mutants_deps__libc-0.2.182//:build_script_build",
     ],
 )
 

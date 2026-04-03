@@ -101,19 +101,19 @@ rust_library(
     version = "1.6.1",
     deps = select({
         "@rules_rust//rust/platform:wasm32-unknown-emscripten": [
-            "@rules_rust_mutation_deps__web-sys-0.3.91//:web_sys",  # wasm32-unknown-emscripten
+            "@rules_rust_mutants_deps__web-sys-0.3.91//:web_sys",  # wasm32-unknown-emscripten
         ],
         "@rules_rust//rust/platform:wasm32-unknown-unknown": [
-            "@rules_rust_mutation_deps__web-sys-0.3.91//:web_sys",  # wasm32-unknown-unknown
+            "@rules_rust_mutants_deps__web-sys-0.3.91//:web_sys",  # wasm32-unknown-unknown
         ],
         "@rules_rust//rust/platform:wasm32-wasip1": [
-            "@rules_rust_mutation_deps__wasite-0.1.0//:wasite",  # cfg(all(target_arch = "wasm32", target_os = "wasi"))
+            "@rules_rust_mutants_deps__wasite-0.1.0//:wasite",  # cfg(all(target_arch = "wasm32", target_os = "wasi"))
         ],
         "@rules_rust//rust/platform:wasm32-wasip1-threads": [
-            "@rules_rust_mutation_deps__wasite-0.1.0//:wasite",  # cfg(all(target_arch = "wasm32", target_os = "wasi"))
+            "@rules_rust_mutants_deps__wasite-0.1.0//:wasite",  # cfg(all(target_arch = "wasm32", target_os = "wasi"))
         ],
         "@rules_rust//rust/platform:wasm32-wasip2": [
-            "@rules_rust_mutation_deps__wasite-0.1.0//:wasite",  # cfg(all(target_arch = "wasm32", target_os = "wasi"))
+            "@rules_rust_mutants_deps__wasite-0.1.0//:wasite",  # cfg(all(target_arch = "wasm32", target_os = "wasi"))
         ],
         "//conditions:default": [],
     }),

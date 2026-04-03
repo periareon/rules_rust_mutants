@@ -43,7 +43,7 @@ rust_library(
     crate_root = "src/lib.rs",
     edition = "2021",
     proc_macro_deps = [
-        "@rules_rust_mutation_deps__schemars_derive-0.9.0//:schemars_derive",
+        "@rules_rust_mutants_deps__schemars_derive-0.9.0//:schemars_derive",
     ],
     rustc_env_files = [
         ":cargo_toml_env_vars",
@@ -104,9 +104,9 @@ rust_library(
     }),
     version = "0.9.0",
     deps = [
-        "@rules_rust_mutation_deps__dyn-clone-1.0.20//:dyn_clone",
-        "@rules_rust_mutation_deps__ref-cast-1.0.25//:ref_cast",
-        "@rules_rust_mutation_deps__serde-1.0.228//:serde",
-        "@rules_rust_mutation_deps__serde_json-1.0.149//:serde_json",
+        "@rules_rust_mutants_deps__dyn-clone-1.0.20//:dyn_clone",
+        "@rules_rust_mutants_deps__ref-cast-1.0.25//:ref_cast",
+        "@rules_rust_mutants_deps__serde-1.0.228//:serde",
+        "@rules_rust_mutants_deps__serde_json-1.0.149//:serde_json",
     ],
 )

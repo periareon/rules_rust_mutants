@@ -99,6 +99,6 @@ rust_library(
     }),
     version = "0.9.18",
     deps = [
-        "@rules_rust_mutation_deps__crossbeam-utils-0.8.21//:crossbeam_utils",
+        "@rules_rust_mutants_deps__crossbeam-utils-0.8.21//:crossbeam_utils",
     ],
 )

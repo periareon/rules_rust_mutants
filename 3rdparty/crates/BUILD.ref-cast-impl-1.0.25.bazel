@@ -95,8 +95,8 @@ rust_proc_macro(
     }),
     version = "1.0.25",
     deps = [
-        "@rules_rust_mutation_deps__proc-macro2-1.0.106//:proc_macro2",
-        "@rules_rust_mutation_deps__quote-1.0.44//:quote",
-        "@rules_rust_mutation_deps__syn-2.0.117//:syn",
+        "@rules_rust_mutants_deps__proc-macro2-1.0.106//:proc_macro2",
+        "@rules_rust_mutants_deps__quote-1.0.44//:quote",
+        "@rules_rust_mutants_deps__syn-2.0.117//:syn",
     ],
 )

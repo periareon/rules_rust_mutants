@@ -98,6 +98,6 @@ rust_library(
     }),
     version = "0.15.5",
     deps = [
-        "@rules_rust_mutation_deps__foldhash-0.1.5//:foldhash",
+        "@rules_rust_mutants_deps__foldhash-0.1.5//:foldhash",
     ],
 )

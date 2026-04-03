@@ -43,7 +43,7 @@ rust_library(
     crate_root = "src/lib.rs",
     edition = "2021",
     proc_macro_deps = [
-        "@rules_rust_mutation_deps__test-log-macros-0.2.19//:test_log_macros",
+        "@rules_rust_mutants_deps__test-log-macros-0.2.19//:test_log_macros",
     ],
     rustc_env_files = [
         ":cargo_toml_env_vars",
@@ -104,7 +104,7 @@ rust_library(
     }),
     version = "0.2.19",
     deps = [
-        "@rules_rust_mutation_deps__env_logger-0.11.9//:env_logger",
-        "@rules_rust_mutation_deps__tracing-subscriber-0.3.22//:tracing_subscriber",
+        "@rules_rust_mutants_deps__env_logger-0.11.9//:env_logger",
+        "@rules_rust_mutants_deps__tracing-subscriber-0.3.22//:tracing_subscriber",
     ],
 )

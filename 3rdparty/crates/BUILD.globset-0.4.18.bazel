@@ -99,10 +99,10 @@ rust_library(
     }),
     version = "0.4.18",
     deps = [
-        "@rules_rust_mutation_deps__aho-corasick-1.1.4//:aho_corasick",
-        "@rules_rust_mutation_deps__bstr-1.12.1//:bstr",
-        "@rules_rust_mutation_deps__log-0.4.29//:log",
-        "@rules_rust_mutation_deps__regex-automata-0.4.14//:regex_automata",
-        "@rules_rust_mutation_deps__regex-syntax-0.8.10//:regex_syntax",
+        "@rules_rust_mutants_deps__aho-corasick-1.1.4//:aho_corasick",
+        "@rules_rust_mutants_deps__bstr-1.12.1//:bstr",
+        "@rules_rust_mutants_deps__log-0.4.29//:log",
+        "@rules_rust_mutants_deps__regex-automata-0.4.14//:regex_automata",
+        "@rules_rust_mutants_deps__regex-syntax-0.8.10//:regex_syntax",
     ],
 )

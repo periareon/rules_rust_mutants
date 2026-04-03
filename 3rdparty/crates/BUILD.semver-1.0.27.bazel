@@ -23,7 +23,7 @@ rust_library(
         allow_empty = True,
     ),
     aliases = {
-        "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core": "serde",
+        "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core": "serde",
     },
     compile_data = glob(
         include = ["**"],
@@ -103,6 +103,6 @@ rust_library(
     }),
     version = "1.0.27",
     deps = [
-        "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",
+        "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",
     ],
 )

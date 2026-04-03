@@ -146,53 +146,53 @@ rust_library(
     }),
     version = "2.13.0",
     deps = [
-        "@rules_rust_mutation_deps__equivalent-1.0.2//:equivalent",
-        "@rules_rust_mutation_deps__hashbrown-0.16.1//:hashbrown",
+        "@rules_rust_mutants_deps__equivalent-1.0.2//:equivalent",
+        "@rules_rust_mutants_deps__hashbrown-0.16.1//:hashbrown",
     ] + select({
         "@rules_rust//rust/platform:aarch64-apple-darwin": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # aarch64-apple-darwin
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # aarch64-apple-darwin
         ],
         "@rules_rust//rust/platform:aarch64-pc-windows-msvc": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # aarch64-pc-windows-msvc
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # aarch64-pc-windows-msvc
         ],
         "@rules_rust//rust/platform:aarch64-unknown-linux-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # aarch64-unknown-linux-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # aarch64-unknown-linux-gnu
         ],
         "@rules_rust//rust/platform:aarch64-unknown-nixos-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # aarch64-unknown-linux-gnu, aarch64-unknown-nixos-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # aarch64-unknown-linux-gnu, aarch64-unknown-nixos-gnu
         ],
         "@rules_rust//rust/platform:arm-unknown-linux-gnueabi": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # arm-unknown-linux-gnueabi
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # arm-unknown-linux-gnueabi
         ],
         "@rules_rust//rust/platform:i686-pc-windows-msvc": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # i686-pc-windows-msvc
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # i686-pc-windows-msvc
         ],
         "@rules_rust//rust/platform:i686-unknown-linux-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # i686-unknown-linux-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # i686-unknown-linux-gnu
         ],
         "@rules_rust//rust/platform:powerpc-unknown-linux-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # powerpc-unknown-linux-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # powerpc-unknown-linux-gnu
         ],
         "@rules_rust//rust/platform:riscv64gc-unknown-linux-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # riscv64gc-unknown-linux-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # riscv64gc-unknown-linux-gnu
         ],
         "@rules_rust//rust/platform:s390x-unknown-linux-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # s390x-unknown-linux-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # s390x-unknown-linux-gnu
         ],
         "@rules_rust//rust/platform:x86_64-apple-darwin": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # x86_64-apple-darwin
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # x86_64-apple-darwin
         ],
         "@rules_rust//rust/platform:x86_64-pc-windows-msvc": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # x86_64-pc-windows-msvc
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # x86_64-pc-windows-msvc
         ],
         "@rules_rust//rust/platform:x86_64-unknown-freebsd": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # x86_64-unknown-freebsd
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # x86_64-unknown-freebsd
         ],
         "@rules_rust//rust/platform:x86_64-unknown-linux-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # x86_64-unknown-linux-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # x86_64-unknown-linux-gnu
         ],
         "@rules_rust//rust/platform:x86_64-unknown-nixos-gnu": [
-            "@rules_rust_mutation_deps__serde_core-1.0.228//:serde_core",  # x86_64-unknown-linux-gnu, x86_64-unknown-nixos-gnu
+            "@rules_rust_mutants_deps__serde_core-1.0.228//:serde_core",  # x86_64-unknown-linux-gnu, x86_64-unknown-nixos-gnu
         ],
         "//conditions:default": [],
     }),

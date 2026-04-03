@@ -103,7 +103,7 @@ rust_library(
     }),
     version = "1.0.102",
     deps = [
-        "@rules_rust_mutation_deps__anyhow-1.0.102//:build_script_build",
+        "@rules_rust_mutants_deps__anyhow-1.0.102//:build_script_build",
     ],
 )
 

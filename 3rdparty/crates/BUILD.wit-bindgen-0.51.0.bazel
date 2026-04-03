@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "0.51.0",
     deps = [
-        "@rules_rust_mutation_deps__wit-bindgen-0.51.0//:build_script_build",
+        "@rules_rust_mutants_deps__wit-bindgen-0.51.0//:build_script_build",
     ],
 )
 

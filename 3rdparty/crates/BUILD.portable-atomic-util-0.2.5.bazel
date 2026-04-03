@@ -102,8 +102,8 @@ rust_library(
     }),
     version = "0.2.5",
     deps = [
-        "@rules_rust_mutation_deps__portable-atomic-1.13.1//:portable_atomic",
-        "@rules_rust_mutation_deps__portable-atomic-util-0.2.5//:build_script_build",
+        "@rules_rust_mutants_deps__portable-atomic-1.13.1//:portable_atomic",
+        "@rules_rust_mutants_deps__portable-atomic-util-0.2.5//:build_script_build",
     ],
 )
 

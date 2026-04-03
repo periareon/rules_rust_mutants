@@ -37,7 +37,7 @@ rust_library(
     crate_root = "src/lib.rs",
     edition = "2018",
     proc_macro_deps = [
-        "@rules_rust_mutation_deps__color-print-proc-macro-0.3.7//:color_print_proc_macro",
+        "@rules_rust_mutants_deps__color-print-proc-macro-0.3.7//:color_print_proc_macro",
     ],
     rustc_env_files = [
         ":cargo_toml_env_vars",

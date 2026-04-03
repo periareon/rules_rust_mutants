@@ -99,8 +99,8 @@ rust_library(
     }),
     version = "0.2.114",
     deps = [
-        "@rules_rust_mutation_deps__unicode-ident-1.0.24//:unicode_ident",
-        "@rules_rust_mutation_deps__wasm-bindgen-shared-0.2.114//:build_script_build",
+        "@rules_rust_mutants_deps__unicode-ident-1.0.24//:unicode_ident",
+        "@rules_rust_mutants_deps__wasm-bindgen-shared-0.2.114//:build_script_build",
     ],
 )
 

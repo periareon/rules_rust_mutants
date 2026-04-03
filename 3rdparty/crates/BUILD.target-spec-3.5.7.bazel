@@ -103,12 +103,12 @@ rust_library(
     }),
     version = "3.5.7",
     deps = [
-        "@rules_rust_mutation_deps__cfg-expr-0.20.6//:cfg_expr",
-        "@rules_rust_mutation_deps__guppy-workspace-hack-0.1.0//:guppy_workspace_hack",
-        "@rules_rust_mutation_deps__serde-1.0.228//:serde",
-        "@rules_rust_mutation_deps__serde_json-1.0.149//:serde_json",
-        "@rules_rust_mutation_deps__target-lexicon-0.13.3//:target_lexicon",
-        "@rules_rust_mutation_deps__target-spec-3.5.7//:build_script_build",
+        "@rules_rust_mutants_deps__cfg-expr-0.20.6//:cfg_expr",
+        "@rules_rust_mutants_deps__guppy-workspace-hack-0.1.0//:guppy_workspace_hack",
+        "@rules_rust_mutants_deps__serde-1.0.228//:serde",
+        "@rules_rust_mutants_deps__serde_json-1.0.149//:serde_json",
+        "@rules_rust_mutants_deps__target-lexicon-0.13.3//:target_lexicon",
+        "@rules_rust_mutants_deps__target-spec-3.5.7//:build_script_build",
     ],
 )
 

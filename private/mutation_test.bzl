@@ -324,7 +324,7 @@ Mutation enumeration mode:
 
 Example:
 ```python
-load("@rules_rust_mutation//:defs.bzl", "rust_mutation_test")
+load("@rules_rust_mutants//:defs.bzl", "rust_mutation_test")
 
 rust_library(
     name = "my_lib",

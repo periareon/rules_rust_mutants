@@ -95,11 +95,11 @@ rust_library(
     }),
     version = "0.12.3",
     deps = [
-        "@rules_rust_mutation_deps__camino-1.2.2//:camino",
-        "@rules_rust_mutation_deps__nextest-workspace-hack-0.1.0//:nextest_workspace_hack",
-        "@rules_rust_mutation_deps__serde-1.0.228//:serde",
-        "@rules_rust_mutation_deps__serde_json-1.0.149//:serde_json",
-        "@rules_rust_mutation_deps__smol_str-0.3.5//:smol_str",
-        "@rules_rust_mutation_deps__target-spec-3.5.7//:target_spec",
+        "@rules_rust_mutants_deps__camino-1.2.2//:camino",
+        "@rules_rust_mutants_deps__nextest-workspace-hack-0.1.0//:nextest_workspace_hack",
+        "@rules_rust_mutants_deps__serde-1.0.228//:serde",
+        "@rules_rust_mutants_deps__serde_json-1.0.149//:serde_json",
+        "@rules_rust_mutants_deps__smol_str-0.3.5//:smol_str",
+        "@rules_rust_mutants_deps__target-spec-3.5.7//:target_spec",
     ],
 )

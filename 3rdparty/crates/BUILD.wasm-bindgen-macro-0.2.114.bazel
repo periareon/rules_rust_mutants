@@ -95,7 +95,7 @@ rust_proc_macro(
     }),
     version = "0.2.114",
     deps = [
-        "@rules_rust_mutation_deps__quote-1.0.44//:quote",
-        "@rules_rust_mutation_deps__wasm-bindgen-macro-support-0.2.114//:wasm_bindgen_macro_support",
+        "@rules_rust_mutants_deps__quote-1.0.44//:quote",
+        "@rules_rust_mutants_deps__wasm-bindgen-macro-support-0.2.114//:wasm_bindgen_macro_support",
     ],
 )

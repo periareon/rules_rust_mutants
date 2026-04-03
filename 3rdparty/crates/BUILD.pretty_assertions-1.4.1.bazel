@@ -99,7 +99,7 @@ rust_library(
     }),
     version = "1.4.1",
     deps = [
-        "@rules_rust_mutation_deps__diff-0.1.13//:diff",
-        "@rules_rust_mutation_deps__yansi-1.0.1//:yansi",
+        "@rules_rust_mutants_deps__diff-0.1.13//:diff",
+        "@rules_rust_mutants_deps__yansi-1.0.1//:yansi",
     ],
 )
