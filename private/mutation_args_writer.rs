@@ -214,8 +214,23 @@ fn main() {
 mod tests {
     use super::*;
 
+    fn unique_temp_dir(name: &str) -> PathBuf {
+        let nanos = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .expect("system time should be after unix epoch")
+            .as_nanos();
+        let path = std::env::temp_dir().join(format!(
+            "{}_{}_{}",
+            name,
+            std::process::id(),
+            nanos,
+        ));
+        fs::create_dir_all(&path).expect("temp dir should be created");
+        path
+    }
+
     #[test]
-    fn build_runtime_params_replaces_crate_root_and_drops_emit() {
+    fn build_runtime_params_replaces_crate_root_and_drops_output_flags() {
         let options = Options {
             output: PathBuf::from("unused"),
             crate_root_placeholder: "__ROOT__".to_owned(),
@@ -225,6 +240,7 @@ mod tests {
                 "/execroot/bazel-out/k8-fastbuild/bin/pkg/src/lib.rs".to_owned(),
                 "--crate-name=my_crate".to_owned(),
                 "--emit=link=/execroot/bazel-out/k8-fastbuild/bin/pkg/out".to_owned(),
+                "--out-dir=/execroot/bazel-out/k8-fastbuild/bin/pkg/out-dir".to_owned(),
                 "--extern=dep=/execroot/bazel-out/k8-fastbuild/bin/external/dep/libdep.rlib"
                     .to_owned(),
                 "--cfg=test".to_owned(),
@@ -239,6 +255,50 @@ mod tests {
             .any(|arg| arg == "--extern=dep=external/dep/libdep.rlib"));
         assert!(args.iter().any(|arg| arg == "--cfg=test"));
         assert!(!args.iter().any(|arg| arg.starts_with("--emit=")));
+        assert!(!args.iter().any(|arg| arg.starts_with("--out-dir=")));
+    }
+
+    #[test]
+    fn build_runtime_params_expands_param_files_and_appends_build_flags() {
+        let tmp_dir = unique_temp_dir("mutation_args_writer");
+        let params_file = tmp_dir.join("action.params");
+        let build_flags_file = tmp_dir.join("build.flags");
+        fs::write(
+            &params_file,
+            "--cfg=from_params
+--extern=dep=/execroot/bazel-out/k8-fastbuild/bin/external/dep/libdep.rlib
+",
+        )
+        .expect("params file should be written");
+        fs::write(&build_flags_file, "--cfg=from_build_script
+")
+            .expect("build flags file should be written");
+
+        let options = Options {
+            output: PathBuf::from("unused"),
+            crate_root_placeholder: "__ROOT__".to_owned(),
+            strip_prefixes: vec!["/execroot/bazel-out/k8-fastbuild/bin".to_owned()],
+            build_flags_files: vec![build_flags_file.clone()],
+            action_argv: vec![
+                "/execroot/bazel-out/k8-fastbuild/bin/pkg/src/lib.rs".to_owned(),
+                format!("@{}", params_file.display()),
+                "--cfg=from_action".to_owned(),
+            ],
+        };
+
+        let args = build_runtime_params(&options).expect("params should build");
+        assert_eq!(
+            args,
+            vec![
+                "__ROOT__".to_owned(),
+                "--cfg=from_params".to_owned(),
+                "--extern=dep=external/dep/libdep.rlib".to_owned(),
+                "--cfg=from_action".to_owned(),
+                "--cfg=from_build_script".to_owned(),
+            ],
+        );
+
+        let _ = fs::remove_dir_all(tmp_dir);
     }
 
     #[test]
