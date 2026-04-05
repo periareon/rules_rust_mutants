@@ -12,16 +12,6 @@ exports_files(
     visibility = ["//visibility:public"],
 )
 
-filegroup(
-    name = "clippy",
-    testonly = True,
-    srcs = [
-        "//private:clippy",
-        "//test:clippy",
-    ],
-    visibility = ["//visibility:public"],
-)
-
 bzl_library(
     name = "bzl_lib",
     srcs = [
