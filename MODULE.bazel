@@ -2,7 +2,7 @@
 
 module(
     name = "rules_rust_mutants",
-    version = "0.69.0",
+    version = "0.69.1",
 )
 
 bazel_dep(name = "rules_rust", version = "0.69.0")

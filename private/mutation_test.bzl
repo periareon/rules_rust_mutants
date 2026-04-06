@@ -261,6 +261,8 @@ def _rust_mutation_test_impl(ctx):
     args_content.add("--rustc-env-files-list", rustc_env_files_list.short_path)
     if ctx.file.mutants_config:
         args_content.add("--mutants-config", ctx.file.mutants_config.short_path)
+    for pattern in ctx.attr.exclude_re:
+        args_content.add("--exclude-re", pattern)
     if ctx.attr.allow_survivors:
         args_content.add("--allow-survivors")
     ctx.actions.write(args_file, args_content)
@@ -350,6 +352,10 @@ Run with: `bazel test //:my_lib_mutation_test --test_output=all`
             doc = "The `rust_library` crate to mutation-test. " +
                   "The crate's inline `#[cfg(test)]` tests are compiled " +
                   "and run against each mutation.",
+        ),
+        "exclude_re": attr.string_list(
+            doc = "Regular expression patterns to exclude mutants. " +
+                  "Each pattern is forwarded as `cargo mutants --exclude-re <pattern>`.",
         ),
         "mutants_config": attr.label(
             allow_single_file = [".toml"],

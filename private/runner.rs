@@ -44,6 +44,7 @@ struct Args {
     cargo: Option<PathBuf>,
     cargo_mutants: Option<PathBuf>,
     mutants_config: Option<PathBuf>,
+    exclude_re: Vec<String>,
     allow_survivors: bool,
 }
 
@@ -69,6 +70,7 @@ fn parse_args_from_vec(raw: &[String]) -> Args {
     let mut cargo = None;
     let mut cargo_mutants = None;
     let mut mutants_config = None;
+    let mut exclude_re = Vec::new();
     let mut allow_survivors = false;
 
     let mut i = 0;
@@ -126,6 +128,9 @@ fn parse_args_from_vec(raw: &[String]) -> Args {
                     "--mutants-config",
                 )));
             }
+            "--exclude-re" => {
+                exclude_re.push(next_arg_value(raw, &mut i, "--exclude-re"));
+            }
             "--allow-survivors" => {
                 allow_survivors = true;
             }
@@ -159,6 +164,7 @@ fn parse_args_from_vec(raw: &[String]) -> Args {
         cargo,
         cargo_mutants,
         mutants_config,
+        exclude_re,
         allow_survivors,
     }
 }
@@ -700,6 +706,7 @@ fn collect_file_mutants_with_cargo_mutants(
     cargo_mutants: &Path,
     cargo: &Path,
     mutants_config: Option<&Path>,
+    exclude_re: &[String],
     sources: &HashMap<PathBuf, String>,
     base_env: &HashMap<OsString, OsString>,
 ) -> Result<Vec<FileMutant>, String> {
@@ -723,6 +730,9 @@ fn collect_file_mutants_with_cargo_mutants(
             .arg(&source_path);
         if let Some(config) = mutants_config {
             command.arg("--config").arg(config);
+        }
+        for pattern in exclude_re {
+            command.arg("--exclude-re").arg(pattern);
         }
 
         let output = command.output().map_err(|e| {
@@ -769,6 +779,7 @@ fn collect_file_mutants(
     cargo_mutants: &Path,
     cargo: &Path,
     mutants_config: Option<&Path>,
+    exclude_re: &[String],
     base_env: &HashMap<OsString, OsString>,
 ) -> Result<Vec<FileMutant>, String> {
     if !cargo_mutants_available(cargo_mutants, base_env) {
@@ -778,7 +789,14 @@ fn collect_file_mutants(
         ));
     }
     println!("Generating mutants with cargo-mutants...");
-    collect_file_mutants_with_cargo_mutants(cargo_mutants, cargo, mutants_config, sources, base_env)
+    collect_file_mutants_with_cargo_mutants(
+        cargo_mutants,
+        cargo,
+        mutants_config,
+        exclude_re,
+        sources,
+        base_env,
+    )
 }
 
 fn mutant_name(index: usize, file_mutant: &FileMutant) -> String {
@@ -1025,6 +1043,7 @@ fn main() {
         &cargo_mutants,
         &cargo,
         mutants_config.as_deref(),
+        &args.exclude_re,
         &subprocess_env,
     ) {
         Ok(m) => m,
@@ -1134,6 +1153,7 @@ mod tests {
             cargo: None,
             cargo_mutants: None,
             mutants_config: None,
+            exclude_re: Vec::new(),
             allow_survivors: false,
         }
     }
