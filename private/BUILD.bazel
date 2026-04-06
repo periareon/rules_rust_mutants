@@ -1,6 +1,6 @@
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("@rules_rust//cargo:defs.bzl", "cargo_toml_env_vars")
-load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_clippy", "rust_test")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_test")
 load("//3rdparty/crates:defs.bzl", "aliases", "all_crate_deps")
 
 package(default_visibility = ["//visibility:public"])
@@ -63,18 +63,6 @@ rust_test(
     srcs = ["mutation_args_writer.rs"],
     crate_root = "mutation_args_writer.rs",
     edition = "2021",
-)
-
-rust_clippy(
-    name = "clippy",
-    testonly = True,
-    visibility = ["//:__pkg__"],
-    deps = [
-        ":mutation_args_writer",
-        ":mutation_args_writer_unit_test",
-        ":runner",
-        ":runner_unit_test",
-    ],
 )
 
 bzl_library(

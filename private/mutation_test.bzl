@@ -357,6 +357,9 @@ Run with: `bazel test //:my_lib_mutation_test --test_output=all`
                   "It is forwarded as `cargo mutants --config <path>`. " +
                   "If all mutants are filtered out, the target succeeds and reports no mutants.",
         ),
+        "rustc_flags": attr.string_list(
+            doc = "Additional flags passed through to rustc when compiling the baseline and mutant test binaries.",
+        ),
         "_cargo_mutants": attr.label(
             default = Label("//private:cargo_mutants"),
             executable = True,

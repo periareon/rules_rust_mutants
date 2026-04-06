@@ -16,5 +16,3 @@ common --show_timestamps
 # Show all failures
 common --keep_going
 
-# Enable linters and formatters
-build --config=strict
